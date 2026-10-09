@@ -1,0 +1,56 @@
+{
+  "application": {
+    "params": {
+      "backdrop_target": 236,
+      "flatten_backdrop": true,
+      "jpeg_quality": 90,
+      "long_edge": 1800,
+      "unsharp": {
+        "percent": 55,
+        "radius": 2,
+        "threshold": 3
+      },
+      "white_balance": "auto-if-cast"
+    },
+    "script": "polish.py --backdrop-target 236"
+  },
+  "measured": "2026-10-01",
+  "note": "Reference images are the property of ARTS&SCIENCE; stored locally for treatment analysis only, never republished.",
+  "profile": "arts-science-reference",
+  "source": "online-intl.arts-science.com homepage hero mosaic (6 product shots, 3024w)",
+  "treatment": {
+    "backdrop": {
+      "description": "Bright neutral light-grey sweep, just off white. Perfectly neutral (no cast). Very even, with only a whisper of natural falloff/shadow retained around the product \u2014 not a flat digital fill.",
+      "evenness_std": 4.8,
+      "target_rgb": [
+        236,
+        236,
+        236
+      ]
+    },
+    "color": "Natural saturation per product, no global desaturation or stylistic grade.",
+    "contrast": "Natural full-range contrast. Blacks reach ~10 (not lifted), highlights ~213 (not clipped). No S-curve grade, no faded blacks.",
+    "exposure": "Backdrop keyed to ~236; subject exposure natural, matched across the set.",
+    "framing": "3:4 portrait, product centered with generous headroom, high-res source (3024px) served scaled.",
+    "grain": "None (residual noise std ~0.45).",
+    "output": {
+      "colorspace": "sRGB",
+      "format": "JPEG",
+      "long_edge_px": 1800,
+      "quality": 90
+    },
+    "sharpening": "Light capture sharpening for web.",
+    "vignette": "None applied; slight natural falloff only.",
+    "white_balance": "Neutral grey-world on backdrop; cast deviation ~0 across all samples."
+  },
+  "shopify": {
+    "note": "All iswas demo work will eventually move to Shopify (Dawn 15.3.0).",
+    "master_export_long_edge": 2048,
+    "format": "sRGB JPEG q85-90; PNG only for transparency",
+    "hard_limits": "4472x4472 px or 20 MB per image",
+    "cdn": "Shopify CDN auto-serves WebP/AVIF + responsive widths from image_url; upload one high-quality master",
+    "theme_code": "serve via | image_url / | image_tag with widths, never hotlink demo paths; alt text on every product image",
+    "framing": "keep consistent aspect ratios (e.g. 3:4) so Dawn image_ratio crops stay predictable",
+    "filenames": "lowercase, hyphenated, no spaces"
+  }
+}

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iswas — INTL. Online Store</title>
+<meta name="description" content="iswas — slow fashion, made in New Delhi. Dresses, tops, bottoms, coats & jackets, things.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="../shared-assets/iswas-wordmark.svg" type="image/svg+xml">
+<meta property="og:title" content="iswas — INTL. Online Store">
+<meta property="og:description" content="iswas — slow fashion, made in New Delhi. Dresses, tops, bottoms, coats & jackets, things.">
+<meta property="og:type" content="website">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="header-inner">
+    <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="nav-left" aria-label="Main">
+      <a class="nav-link active" href="index.html">Home</a>
+      <div class="nav-item">
+        <a class="nav-link" href="#index">Shop <span class="arr">▾</span></a>
+        <div class="dropdown mega">
+          <div class="mega-inner">
+            <div class="mega-col"><h4>All <span class="cnt">(60)</span></h4><a href="#index">New arrivals</a><a href="#index">Bestsellers</a><a href="#index">Back in stock</a><a class="viewall" href="#index">View all</a></div>
+            <div class="mega-col"><h4>Tops <span class="cnt">(23)</span></h4><a href="product-indigo-tee.html">Indigo Tee</a><a href="product-tee-top-red.html">Red Tee Top</a><a href="product-disq-pink-t-shirt.html">Pink Disq T-Shirt</a><a href="product-smock-top-red.html">Red Smock Blouse</a><a class="viewall" href="#index">View all</a></div>
+            <div class="mega-col"><h4>Bottoms <span class="cnt">(18)</span></h4><a href="product-blackish-wide-pant.html">Blackish Wide Pant</a><a href="product-blue-tuck-pant.html">Blue Tuck Pant</a><a href="product-striped-pant.html">Striped Pant</a><a class="viewall" href="#index">View all</a></div>
+            <div class="mega-col"><h4>Dresses <span class="cnt">(15)</span></h4><a href="product-denim-u-dress.html">Denim U Dress</a><a href="product-greys-boro-dress.html">Greys Boro Dress</a><a href="product-big-dot-brown-dress.html">Brown Big Dot Dress</a><a href="product-reds-boro-dress.html">Reds Boro Dress</a><a class="viewall" href="#index">View all</a></div>
+            <div class="mega-col"><h4>Coats &amp; Jackets <span class="cnt">(2)</span></h4><a href="product-beige-quilted-jacket.html">Beige Quilted Jacket</a><a href="product-denim-hoodie.html">Denim Hoodie</a><a class="viewall" href="#index">View all</a></div>
+            <div class="mega-col"><h4>Things <span class="cnt">(2)</span></h4><a href="product-gold-tote.html">Gold Tote</a><a href="product-silver-tote.html">Silver Tote</a><a class="viewall" href="#index">View all</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="#focus">Focus <span class="arr">▾</span></a>
+        <div class="dropdown"><div class="drop-list cols2">
+          <a href="product-beige-quilted-jacket.html">The Quilted Jacket</a><a href="product-reds-boro-dress.html">Boro, Reworked</a>
+          <a href="product-denim-hoodie.html">Denim Days</a><a href="product-marbled-smock-dress.html">The Smock Dress</a>
+          <a href="product-silver-tote.html">Carry: The Tote Edit</a><a href="product-red-gather-blouse.html">Festive Gifting</a>
+        </div></div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="#index">Index <span class="arr">▾</span></a>
+        <div class="dropdown"><div class="drop-list cols3">
+          <a href="#index">All Products <span class="cnt">(60)</span></a>
+          <a href="#index">Tops <span class="cnt">(23)</span></a>
+          <a href="#index">Bottoms <span class="cnt">(18)</span></a>
+          <a href="#index">Dresses <span class="cnt">(15)</span></a>
+          <a href="#index">Coats &amp; Jackets <span class="cnt">(2)</span></a>
+          <a href="#index">Things <span class="cnt">(2)</span></a>
+        </div></div>
+      </div>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#" data-modal="contact">Contact</a>
+    </nav>
+    <a class="brand-center" href="index.html" aria-label="iswas home">
+      <img src="../shared-assets/iswas-wordmark.svg" alt="iswas">
+      <span>INTL.</span>
+    </a>
+    <div class="nav-right">
+      <button class="icon-btn" id="search-open" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+      <button class="icon-btn" data-modal="wishlist" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20.5C7 16.5 3 13.2 3 9.3 3 6.4 5.2 4.5 7.7 4.5c1.7 0 3.3.9 4.3 2.4 1-1.5 2.6-2.4 4.3-2.4 2.5 0 4.7 1.9 4.7 4.8 0 3.9-4 7.2-9 11.2z"/></svg></button>
+      <button class="icon-btn" data-modal="login" aria-label="Account"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-5.5 8-5.5s6.5 1.5 8 5.5"/></svg></button>
+      <button class="icon-btn" data-modal="contact" aria-label="Contact"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg></button>
+      <a class="cart-link" href="#" id="cart-open">Cart (<span class="cart-count">0</span>)</a>
+    </div>
+  </div>
+  <div class="search-bar" id="searchbar">
+    <div class="search-inner">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" placeholder="Search products…" aria-label="Search products">
+      <button class="search-close" id="search-x" aria-label="Close search">×</button>
+    </div>
+    <div class="search-div"><div></div></div>
+  </div>
+</header>
+
+<!-- ================= MOBILE NAV ================= -->
+<nav class="mnav" id="mnav" aria-label="Mobile">
+  <div class="mnav-head">
+    <span class="mnav-title">Menu</span>
+    <button class="x" id="mnav-x" aria-label="Close menu">×</button>
+  </div>
+  <a class="mnav-link" href="index.html">Home</a>
+  <div class="mnav-acc">
+    <button class="mnav-acc-head">Shop <span class="arr">▾</span></button>
+    <div class="mnav-acc-body">
+      <div class="mnav-group"><a class="mnav-cat" href="#index">All <span class="cnt">(60)</span></a><a href="#index">New arrivals</a><a href="#index">Bestsellers</a><a href="#index">Back in stock</a><a class="mnav-view" href="#index">View all</a></div>
+      <div class="mnav-group"><a class="mnav-cat" href="#index">Tops <span class="cnt">(23)</span></a><a href="product-indigo-tee.html">Indigo Tee</a><a href="product-tee-top-red.html">Red Tee Top</a><a href="product-disq-pink-t-shirt.html">Pink Disq T-Shirt</a><a href="product-smock-top-red.html">Red Smock Blouse</a><a class="mnav-view" href="#index">View all</a></div>
+      <div class="mnav-group"><a class="mnav-cat" href="#index">Bottoms <span class="cnt">(18)</span></a><a href="product-blackish-wide-pant.html">Blackish Wide Pant</a><a href="product-blue-tuck-pant.html">Blue Tuck Pant</a><a href="product-striped-pant.html">Striped Pant</a><a class="mnav-view" href="#index">View all</a></div>
+      <div class="mnav-group"><a class="mnav-cat" href="#index">Dresses <span class="cnt">(15)</span></a><a href="product-denim-u-dress.html">Denim U Dress</a><a href="product-greys-boro-dress.html">Greys Boro Dress</a><a href="product-big-dot-brown-dress.html">Brown Big Dot Dress</a><a href="product-reds-boro-dress.html">Reds Boro Dress</a><a class="mnav-view" href="#index">View all</a></div>
+      <div class="mnav-group"><a class="mnav-cat" href="#index">Coats &amp; Jackets <span class="cnt">(2)</span></a><a href="product-beige-quilted-jacket.html">Beige Quilted Jacket</a><a href="product-denim-hoodie.html">Denim Hoodie</a><a class="mnav-view" href="#index">View all</a></div>
+      <div class="mnav-group"><a class="mnav-cat" href="#index">Things <span class="cnt">(2)</span></a><a href="product-gold-tote.html">Gold Tote</a><a href="product-silver-tote.html">Silver Tote</a><a class="mnav-view" href="#index">View all</a></div>
+    </div>
+  </div>
+  <div class="mnav-acc">
+    <button class="mnav-acc-head">Focus <span class="arr">▾</span></button>
+    <div class="mnav-acc-body">
+      <a href="product-beige-quilted-jacket.html">The Quilted Jacket</a><a href="product-reds-boro-dress.html">Boro, Reworked</a><a href="product-denim-hoodie.html">Denim Days</a><a href="product-marbled-smock-dress.html">The Smock Dress</a><a href="product-silver-tote.html">Carry: The Tote Edit</a><a href="product-red-gather-blouse.html">Festive Gifting</a>
+    </div>
+  </div>
+  <div class="mnav-acc">
+    <button class="mnav-acc-head">Index <span class="arr">▾</span></button>
+    <div class="mnav-acc-body">
+      <a href="#index">All Products <span class="cnt">(60)</span></a><a href="#index">Tops <span class="cnt">(23)</span></a><a href="#index">Bottoms <span class="cnt">(18)</span></a><a href="#index">Dresses <span class="cnt">(15)</span></a><a href="#index">Coats &amp; Jackets <span class="cnt">(2)</span></a><a href="#index">Things <span class="cnt">(2)</span></a>
+    </div>
+  </div>
+  <a class="mnav-link" href="#about">About</a>
+  <a class="mnav-link" href="#" data-modal="contact">Contact</a>
+</nav>
+
+
+<!-- ================= OVERLAYS ================= -->
+<div class="overlay" id="ov-wishlist"><div class="modal" role="dialog" aria-label="Wishlist">
+  <button class="x" aria-label="Close">×</button>
+  <h3>My Wishlist</h3><p class="sub">Guest Shopper — sign in to sync your list.</p>
+  <p class="empty">Your wishlist is empty.</p>
+  <a class="btn-line center" href="index.html">Continue shopping</a>
+</div></div>
+
+<div class="overlay" id="ov-login"><div class="modal" role="dialog" aria-label="Login">
+  <button class="x" aria-label="Close">×</button>
+  <h3>Login</h3><p class="sub">Welcome back.</p>
+  <form data-demo>
+    <div class="field"><label>Email</label><input type="email" required></div>
+    <div class="field"><label>Password</label><input type="password" required></div>
+    <button class="btn-solid" type="submit">Login</button>
+  </form>
+  <p class="alt"><a href="#">Forgot password?</a> &nbsp;·&nbsp; New here? <a href="#">Create one</a></p>
+</div></div>
+
+<div class="overlay" id="ov-contact"><div class="modal" role="dialog" aria-label="Contact">
+  <button class="x" aria-label="Close">×</button>
+  <h3>Contact</h3><p class="sub">We reply within two working days.</p>
+  <form data-demo>
+    <div class="field"><label>Name</label><input type="text" required></div>
+    <div class="field"><label>Email</label><input type="email" required></div>
+    <div class="field"><label>Subject</label><input type="text" required></div>
+    <div class="field"><label>Message</label><textarea rows="4" required></textarea></div>
+    <button class="btn-solid" type="submit">Send</button>
+  </form>
+</div></div>
+
+<!-- ================= CART DRAWER ================= -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Cart">
+  <div class="drawer-head"><button class="x" id="drawer-x" aria-label="Close cart">×</button></div>
+  <div id="cart-note" class="cart-note"></div>
+  <div class="drawer-body" id="cart-lines"></div>
+  <div class="drawer-foot" id="cart-foot" style="display:none">
+    <div class="total-row"><span>Total</span><span id="cart-total">₹0</span></div>
+    <p class="ship-note">Shipping &amp; taxes calculated at checkout</p>
+    <a class="btn-line center" href="#">View Cart</a>
+  </div>
+</aside>
+
+<!-- ================= EDITORIAL HERO ================= -->
+<section class="h-hero" id="main" aria-label="Introduction">
+  <div>
+    <div class="kicker">Slow fashion — New Delhi</div>
+    <h1>Considered garments,<br><em>worn quietly</em> for years.</h1>
+  </div>
+  <div>
+    <p class="lede">A clothing label that values tradition and innovation — working closely with materials to create considered garments and objects, <strong>made in New Delhi</strong>.</p>
+    <div class="h-meta">
+      <div><span>Pieces</span><b>60</b></div>
+      <div><span>Fabrics</span><b>04</b></div>
+      <div><span>City</span><b>01</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FULL-BLEED HERO IMAGE ================= -->
+<section class="luxe-hero-img" aria-label="Featured campaign">
+  <img src="../shared-assets/gen/luxe-hero.webp" alt="Model wearing the hand-quilted beige jacket" fetchpriority="high">
+</section>
+
+<!-- ================= HERO MOSAIC ================= -->
+<section class="mosaic" aria-label="Featured products">
+  <a class="tile frost-host" href="product-denim-hoodie.html">
+    <img src="../shared-assets/denim-hoodie-1.jpg" alt="Denim Hoodie" fetchpriority="high">
+    <span class="frost"><span class="maker">iswas</span><span class="pname">Denim Hoodie</span><span class="pprice">₹9,800</span></span>
+  </a>
+  <a class="tile tall frost-host" href="product-navy-boat-neck-dress.html">
+    <img src="../shared-assets/navy-boat-neck-dress-1.jpg" alt="Navy Boat-Neck Dress" loading="lazy" decoding="async">
+    <span class="frost"><span class="maker">iswas</span><span class="pname">Navy Boat-Neck Dress</span><span class="pprice">₹14,000</span></span>
+  </a>
+  <a class="tile frost-host" href="product-indigo-tee.html">
+    <img src="../shared-assets/indigo-tee-2.jpg" alt="Indigo Tee — back view" loading="lazy" decoding="async">
+    <span class="frost"><span class="maker">iswas</span><span class="pname">Indigo Tee</span><span class="pprice">₹6,800</span></span>
+  </a>
+  <a class="tile frost-host" href="product-denim-u-dress.html">
+    <img src="../shared-assets/denim-u-dress-2.jpg" alt="Denim U-Dress — back view" loading="lazy" decoding="async">
+    <span class="frost"><span class="maker">iswas</span><span class="pname">Denim U-Dress</span><span class="pprice">₹14,000</span></span>
+  </a>
+  <a class="tile frost-host" href="product-blues-boro-dress.html">
+    <img src="../shared-assets/blues-boro-dress-1.jpg" alt="Blues Boro Dress" loading="lazy" decoding="async">
+    <span class="frost"><span class="maker">iswas</span><span class="pname">Blues Boro Dress</span><span class="pprice">₹14,000</span></span>
+  </a>
+</section>
+
+<!-- ================= FOCUS ================= -->
+<section class="sec" id="focus">
+  <div class="sec-head"><div class="eyebrow">Focus</div><h2>Focus</h2></div>
+  <figure class="luxe-sec-img"><img src="../shared-assets/gen/luxe-focus.webp" alt="Hands stitching boro patchwork in the New Delhi atelier" loading="lazy"><figcaption>Inside the studio — boro, stitched by hand</figcaption></figure>
+  <div class="focus-wrap" data-car="#focus-track" data-by="2">
+    <button class="chev prev" aria-label="Previous">‹</button>
+    <div class="focus-track" id="focus-track">
+      <article class="focus-card"><a class="frost-host" href="product-beige-quilted-jacket.html">
+        <img src="../shared-assets/beige-quilted-jacket-2.jpg" alt="The Quilted Jacket" loading="lazy" decoding="async">
+        <span class="frost"><span class="maker">iswas</span><span class="pname">The Quilted Jacket</span></span></a>
+        <div class="focus-cap"><span class="fnum">01.</span><h3>The Quilted Jacket</h3><p>Hand-quilted cotton, washed soft. Our signature winter layer, cut roomy.</p></div>
+      </article>
+      <article class="focus-card"><a class="frost-host" href="product-reds-boro-dress.html">
+        <img src="../shared-assets/shop-reds-boro-dress-1.jpg" loading="lazy" decoding="async" alt="Boro, Reworked">
+        <span class="frost"><span class="maker">iswas</span><span class="pname">Boro, Reworked</span></span></a>
+        <div class="focus-cap"><span class="fnum">02.</span><h3>Boro, Reworked</h3><p>Patchworked cottons, stitched by hand and cut into dresses. Nothing wasted.</p></div>
+      </article>
+      <article class="focus-card"><a class="frost-host" href="product-denim-hoodie.html">
+        <img src="../shared-assets/shop-denim-hoodie-2.jpg" loading="lazy" decoding="async" alt="Denim Days">
+        <span class="frost"><span class="maker">iswas</span><span class="pname">Denim Days</span></span></a>
+        <div class="focus-cap"><span class="fnum">03.</span><h3>Denim Days</h3><p>Garment-washed denim, softened for daily wear. Dresses and hoodies.</p></div>
+      </article>
+      <article class="focus-card"><a class="frost-host" href="product-marbled-smock-dress.html">
+        <img src="../shared-assets/shop-marbled-smock-dress-1.jpg" loading="lazy" decoding="async" alt="The Smock Dress">
+        <span class="frost"><span class="maker">iswas</span><span class="pname">The Smock Dress</span></span></a>
+        <div class="focus-cap"><span class="fnum">04.</span><h3>The Smock Dress</h3><p>Gathered, marbled, easy. One dress, worn three seasons.</p></div>
+      </article>
+      <article class="focus-card"><a class="frost-host" href="product-silver-tote.html">
+        <img src="../shared-assets/shop-silver-tote-1.jpg" loading="lazy" decoding="async" alt="Carry: The Tote Edit">
+        <span class="frost"><span class="maker">iswas</span><span class="pname">Carry: The Tote Edit</span></span></a>
+        <div class="focus-cap"><span class="fnum">05.</span><h3>Carry: The Tote Edit</h3><p>Totes in metallic finishes — gold and silver, made to be used hard.</p></div>
+      </article>
+      <article class="focus-card"><a class="frost-host" href="product-red-gather-blouse.html">
+        <img src="../shared-assets/shop-red-gather-blouse-1.jpg" loading="lazy" decoding="async" alt="Festive Gifting">
+        <span class="frost"><span class="maker">iswas</span><span class="pname">Festive Gifting</span></span></a>
+        <div class="focus-cap"><span class="fnum">06.</span><h3>Festive Gifting</h3><p>Small things, well made. Blouses and totes that gift easily.</p></div>
+      </article>
+    </div>
+    <button class="chev next" aria-label="Next">›</button>
+    <div class="dots"></div>
+  </div>
+</section>
+
+<!-- ================= FABRIC LIBRARY ================= -->
+<section class="sec flush" id="fabric">
+  <div class="sec-head"><div class="eyebrow">Fabric Library</div><h2>Fabric Library</h2></div>
+  <div class="fabric">
+    <div>
+      <div class="fabric-slide">
+        <div class="fabric-meta"><h3>Hand-Quilted Cotton</h3><div class="code">No. 204 — Quilted Cotton</div>
+        <p>Diamond-quilted cotton, washed soft after stitching. The body of our <a href="product-beige-quilted-jacket.html">signature jacket</a> — warm without weight.</p></div>
+      </div>
+      <div class="fabric-slide">
+        <div class="fabric-meta"><h3>Boro Patchwork</h3><div class="code">No. 117 — Boro Cotton</div>
+        <p>Layered cotton remnants, sashiko-stitched by hand. Every <a href="#index">boro dress</a> carries a different map of patches.</p></div>
+      </div>
+      <div class="fabric-slide">
+        <div class="fabric-meta"><h3>Washed Denim</h3><div class="code">No. 089 — Washed Denim</div>
+        <p>Mid-weight denim, garment-washed in New Delhi for a lived-in hand from day one. Cut into the <a href="product-denim-u-dress.html">Denim U Dress</a>.</p></div>
+      </div>
+      <div class="fabric-slide">
+        <div class="fabric-meta"><h3>Indigo Jersey</h3><div class="code">No. 042 — Indigo Jersey</div>
+        <p>Single jersey, yarn-dyed indigo. Fades beautifully with wear — the <a href="product-indigo-tee.html">Indigo Tee</a> gets better every year.</p></div>
+      </div>
+    </div>
+    <div class="fabric-view">
+      <button class="chev prev" id="fabric-prev" aria-label="Previous fabric">‹</button>
+      <div class="fabric-slide"><span class="frost-host"><img src="../shared-assets/beige-quilted-jacket-2.jpg" alt="Hand-quilted cotton" loading="lazy" decoding="async"><span class="frost"><span class="maker">iswas</span><span class="pname">No. 204 — Quilted Cotton</span></span></span></div>
+      <div class="fabric-slide"><span class="frost-host"><img src="../shared-assets/shop-blues-boro-dress-2.jpg" loading="lazy" decoding="async" alt="Boro patchwork"><span class="frost"><span class="maker">iswas</span><span class="pname">No. 117 — Boro Cotton</span></span></span></div>
+      <div class="fabric-slide"><span class="frost-host"><img src="../shared-assets/shop-denim-u-dress-2.jpg" loading="lazy" decoding="async" alt="Washed denim"><span class="frost"><span class="maker">iswas</span><span class="pname">No. 089 — Washed Denim</span></span></span></div>
+      <div class="fabric-slide"><span class="frost-host"><img src="../shared-assets/shop-indigo-tee-2.jpg" loading="lazy" decoding="async" alt="Indigo jersey"><span class="frost"><span class="maker">iswas</span><span class="pname">No. 042 — Indigo Jersey</span></span></span></div>
+      <button class="chev next" id="fabric-next" aria-label="Next fabric">›</button>
+    </div>
+  </div>
+  <figure class="luxe-sec-img"><img src="../shared-assets/gen/luxe-fabric.webp" alt="Macro detail of diamond-quilted cotton" loading="lazy"><figcaption>No. 204 — Quilted Cotton, macro</figcaption></figure>
+</section>
+
+<!-- ================= INDEX ================= -->
+<section class="sec flush" id="index">
+  <div class="sec-head left"><div class="eyebrow">Index</div><h2>Index</h2></div>
+  <div class="luxe-index-grid">
+  <figure class="luxe-side-img"><img src="../shared-assets/gen/luxe-index.webp" alt="Folded garments arranged in a catalogue grid" loading="lazy"></figure>
+  <div class="index-list">
+    <a href="#index">All Products <span class="cnt">(60)</span></a>
+    <a href="#index">Tops <span class="cnt">(23)</span></a>
+    <a href="#index">Bottoms <span class="cnt">(18)</span></a>
+    <a href="#index">Dresses <span class="cnt">(15)</span></a>
+    <a href="#index">Coats &amp; Jackets <span class="cnt">(2)</span></a>
+    <a href="#index">Things <span class="cnt">(2)</span></a>
+  </div>
+  </div>
+</section>
+
+<!-- ================= INFORMATION ================= -->
+<section class="sec flush" id="info">
+  <div class="sec-head left"><div class="eyebrow">Information</div><h2>Information</h2></div>
+  <div class="info-rows">
+    <div class="info-row"><span class="date">26.10.01</span><a href="#info">Festive shipping schedule — order by 20 Oct for on-time delivery</a></div>
+    <div class="info-row"><span class="date">26.09.24</span><a href="#info">The Boro Edit — new patchworked pieces added</a></div>
+    <div class="info-row"><span class="date">26.09.10</span><a href="#info">Coats &amp; Jackets — the quilted jacket returns</a></div>
+  </div>
+  <a class="viewall" href="#info">View all</a>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="sec flush" id="about">
+  <div class="sec-head"><div class="eyebrow">About Us</div><h2>About Us</h2></div>
+  <figure class="luxe-about-img"><img src="../shared-assets/gen/luxe-about.webp" alt="Indigo garment on a wooden hanger" loading="lazy"></figure>
+  <p class="about-copy">Iswas is a clothing label that values tradition and innovation. We take a slow-fashion approach, working closely with materials to create considered garments and objects — made in New Delhi, worn for years.</p>
+  <p class="about-tag">Made in New Delhi</p>
+</section>
+
+<!-- ================= NEWSLETTER ================= -->
+<figure class="luxe-sec-img luxe-nl-img"><img src="../shared-assets/gen/luxe-newsletter.webp" alt="Folded garment with a handwritten note" loading="lazy"></figure>
+<section class="newsletter" id="newsletter">
+  <p class="expl">New pieces, restocks and studio notes. One email a month, nothing more.</p>
+  <form class="nl-form" id="nl-form-inline" data-demo>
+    <label for="nl-email">Subscribe</label>
+    <div class="nl-row"><input id="nl-email" type="email" placeholder="Email address" required aria-label="Email address"><button class="nl-go" type="submit" aria-label="Subscribe">→</button></div>
+  </form>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="foot-brand"><img src="../shared-assets/iswas-wordmark.svg" alt="iswas"></div>
+  <div class="foot-links row2">
+    <a href="#">Refund policy</a><a href="#">Privacy policy</a><a href="#">Terms of service</a>
+    <a href="#">Shipping policy</a><a href="#">Contact information</a>
+  </div>
+  <div class="foot-links row2">
+    <a href="#about">About</a><a href="#" data-modal="contact">Contact</a><a href="#">Country/region</a>
+  </div>
+  <a class="pill" href="https://iswas.shop" target="_blank" rel="noopener">Return to Main site</a>
+  <div class="socials">
+    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 3.6a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zm0 10.2a4 4 0 110-8 4 4 0 010 8zm6.4-10.5a1.4 1.4 0 100 2.9 1.4 1.4 0 000-2.9z"/></svg></a>
+    <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.2l7.3-8.3L1.2 2h6.4l4.4 5.9L18.9 2zm-1.1 17.8h1.7L7.1 3.9H5.3l12.5 15.9z"/></svg></a>
+    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/></svg></a>
+  </div>
+  <p class="copy">© 2026 iswas — Slow fashion, made in New Delhi.</p>
+</footer>
+
+<!-- ================= FLOATING WIDGETS ================= -->
+<div class="chat-wrap">
+  <span class="chat-bubble">How may we assist you?
+    <svg width="14" height="14" viewBox="0 0 24 24" style="stroke:var(--grey);fill:none;stroke-width:1.6"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>
+  </span>
+  <button class="chat-btn" id="chat-open" aria-label="Contact us"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg></button>
+</div>
+
+<div class="nl-popup" id="nl-popup" role="dialog" aria-label="Newsletter">
+  <button class="x" id="nl-x" aria-label="Close">×</button>
+  <h3>Newsletter</h3>
+  <p>New pieces, restocks and studio notes. One email a month, nothing more.</p>
+  <form id="nl-form-pop" data-demo>
+    <div class="field"><input type="email" placeholder="Email address" required aria-label="Email address"></div>
+    <button class="btn-solid" type="submit">Subscribe</button>
+  </form>
+</div>
+
+<div class="cookie-bar" id="cookiebar" role="dialog" aria-label="Cookies">
+  <span>We use cookies to improve your experience.</span>
+  <button class="ghost" data-c="reject">Reject</button>
+  <button data-c="allow">Allow</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

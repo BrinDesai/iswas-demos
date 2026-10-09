@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iswas — The Clothing Rack (Concept)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wordmark">iswas</div>
+  <div class="header-note">Concept 01 — The Clothing Rack</div>
+</header>
+
+<main>
+  <section class="intro">
+    <h1>Ten pieces on the rack.</h1>
+    <p class="lede">Hover or tap a garment and it turns to face you.<br>AI concept renders drawn from iswas flat-lays.</p>
+  </section>
+
+  <section class="rack-wrap">
+    <div class="rack" id="rack"><div class="rail" aria-hidden="true"></div><!-- garments injected by app.js --></div>
+  </section>
+
+  <section class="footnote">
+    <p>Each piece hangs in side profile, the way a rack is seen in store. Hover (or tap) to turn it forward.</p>
+  </section>
+</main>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-card">
+    <button class="drawer-close" id="drawerClose" aria-label="Close">×</button>
+    <img id="drawerImg" alt="">
+    <div class="drawer-info">
+      <h2 id="drawerName"></h2>
+      <p class="drawer-price" id="drawerPrice"></p>
+      <p class="drawer-desc" id="drawerDesc"></p>
+      <p class="drawer-ai">AI concept render — based on the iswas flat-lay, not a photograph of the actual piece.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <span>iswas — New Delhi</span>
+  <span>AI concept demo</span>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

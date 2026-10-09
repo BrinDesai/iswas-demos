@@ -1,0 +1,142 @@
+{
+  "images": [
+    {
+      "file": "reference/ref-1.jpg",
+      "size": [
+        1347,
+        1800
+      ],
+      "backdrop_coverage": 0.601,
+      "backdrop_median": [
+        236.0,
+        236.0,
+        236.0
+      ],
+      "backdrop_cast_dev": 0.0,
+      "backdrop_evenness_std": 4.33,
+      "vignette_corners_minus_centre": NaN,
+      "subject_contrast_std": 31.29,
+      "subject_saturation": 0.516,
+      "subject_p05": 24.0,
+      "subject_p995": 213.0,
+      "grain_std": 0.49
+    },
+    {
+      "file": "reference/ref-2.jpg",
+      "size": [
+        1347,
+        1800
+      ],
+      "backdrop_coverage": 0.557,
+      "backdrop_median": [
+        235.0,
+        235.0,
+        236.0
+      ],
+      "backdrop_cast_dev": 0.67,
+      "backdrop_evenness_std": 5.09,
+      "vignette_corners_minus_centre": NaN,
+      "subject_contrast_std": 36.77,
+      "subject_saturation": 0.291,
+      "subject_p05": 9.0,
+      "subject_p995": 213.7,
+      "grain_std": 0.45
+    },
+    {
+      "file": "reference/ref-3.jpg",
+      "size": [
+        1347,
+        1800
+      ],
+      "backdrop_coverage": 0.681,
+      "backdrop_median": [
+        237.0,
+        237.0,
+        237.0
+      ],
+      "backdrop_cast_dev": 0.0,
+      "backdrop_evenness_std": 4.45,
+      "vignette_corners_minus_centre": NaN,
+      "subject_contrast_std": 29.56,
+      "subject_saturation": 0.279,
+      "subject_p05": 51.0,
+      "subject_p995": 214.0,
+      "grain_std": 0.4
+    },
+    {
+      "file": "reference/ref-4.jpg",
+      "size": [
+        1347,
+        1800
+      ],
+      "backdrop_coverage": 0.76,
+      "backdrop_median": [
+        237.0,
+        237.0,
+        237.0
+      ],
+      "backdrop_cast_dev": 0.0,
+      "backdrop_evenness_std": 4.38,
+      "vignette_corners_minus_centre": 11.04,
+      "subject_contrast_std": 83.84,
+      "subject_saturation": 0.037,
+      "subject_p05": 9.7,
+      "subject_p995": 237.0,
+      "grain_std": 0.44
+    },
+    {
+      "file": "reference/ref-5.jpg",
+      "size": [
+        1347,
+        1800
+      ],
+      "backdrop_coverage": 0.868,
+      "backdrop_median": [
+        236.0,
+        236.0,
+        236.0
+      ],
+      "backdrop_cast_dev": 0.0,
+      "backdrop_evenness_std": 4.3,
+      "vignette_corners_minus_centre": 13.05,
+      "subject_contrast_std": 60.54,
+      "subject_saturation": 0.261,
+      "subject_p05": 12.0,
+      "subject_p995": 231.0,
+      "grain_std": 0.4
+    },
+    {
+      "file": "reference/ref-6.jpg",
+      "size": [
+        1347,
+        1800
+      ],
+      "backdrop_coverage": 0.595,
+      "backdrop_median": [
+        232.0,
+        232.0,
+        232.0
+      ],
+      "backdrop_cast_dev": 0.0,
+      "backdrop_evenness_std": 6.16,
+      "vignette_corners_minus_centre": NaN,
+      "subject_contrast_std": 45.74,
+      "subject_saturation": 0.245,
+      "subject_p05": 11.7,
+      "subject_p995": 212.3,
+      "grain_std": 0.54
+    }
+  ],
+  "aggregate": {
+    "n": 6,
+    "backdrop_median": [
+      235.5,
+      235.5,
+      235.7
+    ],
+    "backdrop_evenness_std": 4.79,
+    "subject_contrast_std": 47.96,
+    "subject_saturation": 0.272,
+    "grain_std": 0.45
+  }
+}

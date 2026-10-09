@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f4f1ea">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='4' fill='%23f2eee6'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23181512'%3Ei%3C/text%3E%3C/svg%3E">
+  <title>iswas — Slow fashion, made in New Delhi</title>
+  <meta name="description" content="iswas is a slow-fashion studio in New Delhi. Western womenswear in washed silks and hand-printed cottons — dresses, tops, bottoms, jackets and totes, made to be worn for years.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="iswas">
+  <meta property="og:title" content="iswas — Slow fashion, made in New Delhi">
+  <meta property="og:description" content="Western womenswear in washed silks and hand-printed cottons. Designed and made in New Delhi.">
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0804/3832/9650/files/DSC04085.jpg?v=1759743680">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg:#f2eee6;
+      --surface:#e8e0d3;
+      --surface-strong:#181512;
+      --text:#181512;
+      --text-on-dark:#f4efe6;
+      --muted:#5e564d;
+      --accent:#b38a56;
+      --accent-strong:#9d7444;
+      --line:rgba(24,21,18,.18);
+      --line-light:rgba(244,239,230,.2);
+      --radius:2px;
+      --pill:999px;
+      --max:1480px;
+      --section:clamp(4.5rem,8vw,7rem);
+      --display:"Libre Caslon Display",Georgia,serif;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;background:var(--bg)}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:"Sora",sans-serif;font-size:15px;line-height:1.55;overflow-x:hidden}
+    button,input{font:inherit;color:inherit}
+    button,a{touch-action:manipulation}
+    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    button{border:0;background:none;padding:0}
+    :focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+    .skip-link{position:absolute;left:12px;top:-70px;z-index:100;background:var(--text);color:var(--bg);padding:.7rem 1.1rem;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;transition:top .2s ease}
+    .skip-link:focus{top:12px}
+    .service-strip{background:var(--surface-strong);color:var(--text-on-dark);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;text-align:center;padding:.6rem 1rem;line-height:1.4}
+    .service-strip .dot{opacity:.45;margin:0 .7em}
+    .site-nav.is-solid .service-strip{display:none}
+    .grain{position:fixed;inset:0;z-index:70;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
+    h1.hero-wordmark{animation:wordmarkIn 1.2s cubic-bezier(.2,.7,.2,1) .1s both}
+    @keyframes wordmarkIn{from{opacity:0;transform:translateY(.14em)}to{opacity:1;transform:none}}
+    @media (prefers-reduced-motion:reduce){h1.hero-wordmark{animation:none}}
+    .product-card{position:relative}
+    .wishlist-btn{position:absolute;top:10px;right:10px;z-index:3;width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:rgba(242,238,230,.92);color:var(--text);opacity:0;transform:translateY(-6px);transition:opacity .25s ease,transform .25s ease,background-color .25s ease}
+    .product-card:hover .wishlist-btn,.wishlist-btn:focus-visible,.wishlist-btn[aria-pressed="true"]{opacity:1;transform:none}
+    .wishlist-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6}
+    .wishlist-btn[aria-pressed="true"]{color:#9d4a3c}
+    .wishlist-btn[aria-pressed="true"] svg{fill:currentColor}
+    .wishlist-btn:active{transform:scale(.88)}
+    .card-badge{position:absolute;top:10px;left:10px;z-index:3;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;padding:.42rem .72rem;border-radius:var(--pill);background:rgba(242,238,230,.94);color:var(--text);border:1px solid rgba(23,20,17,.12);pointer-events:none}
+    .card-badge[data-tone="low"]{color:#9d4a3c}
+    .craft{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:clamp(3.5rem,7vw,6rem) 0;margin-top:clamp(3rem,6vw,5rem)}
+    .craft-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.5rem,4vw,3.5rem);margin-top:2.5rem}
+    .craft-index{display:block;font-size:.72rem;letter-spacing:.14em;color:var(--accent);margin-bottom:1rem}
+    .craft-grid h3{font-family:var(--display);font-weight:400;font-size:clamp(1.4rem,2.2vw,1.9rem);letter-spacing:-.01em;margin:0 0 .6rem}
+    .craft-grid p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.65;max-width:36ch}
+    @media (max-width:760px){.craft-grid{grid-template-columns:1fr}}
+    .wishlist-count{position:absolute;top:-4px;right:-4px;min-width:18px;height:18px;border-radius:9px;background:var(--accent);color:#fff;font-size:.62rem;font-weight:600;display:grid;place-items:center;padding:0 4px}
+    .icon-button{position:relative}
+    .footer-legal{display:flex;gap:1.4rem;margin-top:1.2rem;font-size:.75rem;letter-spacing:.06em}
+    .footer-legal a{opacity:.75}
+    .footer-legal a:hover{opacity:1;text-decoration:underline;text-underline-offset:3px}
+    .shell{width:min(calc(100% - 48px),var(--max));margin-inline:auto}
+    .site-nav{position:absolute;z-index:5;inset:0 0 auto;color:#f4efe6}
+    .nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(244,239,230,.28)}
+    .nav-links{display:flex;gap:clamp(1rem,2.5vw,2.4rem);align-items:center}
+    .nav-links a,.bag-button{font-size:.77rem;letter-spacing:.11em;text-transform:uppercase;font-weight:500}
+    .nav-links a{position:relative;min-height:44px;display:flex;align-items:center;padding-block:10px}
+    .bag-button{min-width:44px;min-height:44px;justify-content:center}
+    .nav-links a::after{content:"";position:absolute;inset:auto 0 2px;width:0;height:1px;background:var(--accent);transition:width .3s ease}
+    .nav-links a:hover::after{width:100%}
+    .nav-meta{display:flex;align-items:center;gap:1rem}
+    .nav-word{font-weight:600;letter-spacing:-.05em;font-size:1.4rem}
+    .bag-button{display:flex;align-items:center;gap:.65rem;cursor:pointer;color:#f4efe6}
+    .bag-button svg{width:18px;height:18px}
+    .hero{position:relative;background:#141210;color:#f4efe6;min-height:min(880px,100dvh);overflow:hidden}
+    .hero-grid{width:min(100%,1700px);margin-inline:auto;min-height:min(880px,100dvh);display:grid;grid-template-columns:minmax(390px,5fr) minmax(520px,7fr)}
+    .hero-copy{position:relative;z-index:2;padding:clamp(8.5rem,13vw,12.5rem) clamp(2rem,7vw,7rem) 3.5rem max(24px,calc((100vw - var(--max))/2));display:flex;flex-direction:column;align-items:flex-start}
+    .hero-kicker{margin:0 0 1.4rem;color:var(--accent);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase}
+    h1{position:relative;z-index:3;font-family:var(--display);font-size:clamp(3.7rem,8vw,8.3rem);font-weight:400;letter-spacing:-.055em;line-height:.86;margin:0;width:60vw;max-width:none;text-shadow:0 2px 24px rgba(20,18,16,.34)}
+    .hero-shift{position:relative;left:30vw;background:#141210;padding-right:.12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+    .hero-detail{display:grid;grid-template-columns:1fr auto;align-items:end;gap:1rem;width:100%;margin-top:auto;padding-top:3.5rem;border-top:1px solid rgba(244,239,230,.24)}
+    .hero-detail p{max-width:38ch;margin:0;color:#c7c0b5;font-size:.92rem}
+    .price{font-variant-numeric:tabular-nums;white-space:nowrap}
+    .hero-price{color:var(--accent);font-size:1.2rem;letter-spacing:-.03em}
+    .cta{display:inline-flex;align-items:center;justify-content:center;gap:.65rem;margin-top:2rem;padding:.9rem 1.25rem;border-radius:var(--pill);background:var(--accent);color:#171411;font-weight:600;font-size:.78rem;letter-spacing:.04em;transition:background .25s ease,color .25s ease}
+    .cta:hover{background:#f4efe6}
+    .cta svg{width:16px;height:16px}
+    .hero-media{position:relative;min-height:620px;overflow:hidden;background:#d9d8d4}
+    .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 21%;filter:contrast(1.02)}
+    .hero-media::after{content:"";position:absolute;inset:0;box-shadow:inset 30px 0 60px rgba(20,18,16,.15);pointer-events:none}
+    .hero-index{position:absolute;right:clamp(1rem,3vw,2.5rem);bottom:2rem;color:#141210;background:rgba(244,239,230,.88);padding:.5rem .75rem;border-radius:var(--pill);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}
+    .craft{border-bottom:1px solid var(--line)}
+    .craft-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr)}
+    .craft-list li{padding:1.6rem clamp(1rem,3vw,2.5rem);text-align:center;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;border-right:1px solid var(--line)}
+    .craft-list li:last-child{border-right:0}
+    .editorial{padding-block:var(--section);border-bottom:1px solid var(--line)}
+    .editorial-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.45fr);gap:3rem;align-items:end;margin-bottom:2.8rem}
+    .editorial-intro h2{font-family:var(--display);font-weight:400;font-size:clamp(3.4rem,7vw,8rem);letter-spacing:-.055em;line-height:.86;margin:0;max-width:8ch}
+    .editorial-intro p{margin:0;color:var(--muted);max-width:39ch}
+    .editorial-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(240px,.65fr);grid-template-rows:repeat(2,minmax(260px,34vw));gap:12px}
+    .editorial-look{position:relative;overflow:hidden;background:var(--surface);margin:0}
+    .editorial-look:first-child{grid-row:1 / span 2}
+    .editorial-look img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+    .editorial-look:first-child img{object-position:center 18%}
+    .editorial-look:nth-child(2) img{object-position:center 22%}
+    .editorial-look:nth-child(3) img{object-position:center 36%}
+    .editorial-look::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,7,6,.58),transparent 38%);pointer-events:none}
+    .editorial-look:hover img{transform:scale(1.02)}
+    .look-caption{position:absolute;z-index:1;left:1.2rem;right:1.2rem;bottom:1rem;color:#f4efe6;display:flex;justify-content:space-between;align-items:end;gap:1rem}
+    .look-caption strong{font-family:var(--display);font-size:clamp(1.3rem,2vw,2rem);font-weight:400;letter-spacing:-.03em}
+    .look-caption span{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+    section{scroll-margin-top:24px}
+    .section{padding-block:var(--section)}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:2rem;margin-bottom:2.5rem}
+    .section-head h2,.story-copy h2,.newsletter h2{font-family:var(--display);margin:0;font-size:clamp(2.8rem,5.4vw,6.2rem);font-weight:400;letter-spacing:-.045em;line-height:.92}
+    .section-head p{max-width:38ch;margin:0;color:var(--muted)}
+    .categories{display:grid;grid-template-columns:1.25fr .75fr 1fr;grid-template-rows:390px 320px;gap:12px}
+    .category{position:relative;overflow:hidden;cursor:pointer;background:var(--surface);text-align:left;color:#fff}
+    .category:nth-child(1){grid-row:span 2}
+    .category:nth-child(4){grid-column:span 2}
+    .category img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+    .category::after{content:"";position:absolute;inset:0;background:rgba(10,9,8,.16);box-shadow:inset 0 -130px 90px -90px rgba(10,9,8,.88);pointer-events:none}
+    .category:hover img{transform:scale(1.035)}
+    .category-label{position:absolute;z-index:2;left:1.25rem;right:1.25rem;bottom:1.15rem;display:flex;align-items:end;justify-content:space-between;gap:1rem}
+    .category-label strong{font-size:clamp(1.15rem,2vw,1.8rem);font-weight:500;letter-spacing:-.045em}
+    .category-label span{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+    .shop-section{padding-bottom:var(--section)}
+    .collection-tools{display:grid;grid-template-columns:minmax(260px,.8fr) minmax(240px,.55fr);justify-content:space-between;align-items:end;gap:clamp(1.5rem,5vw,5rem);padding:1.15rem 0 1.35rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:1.4rem}
+    .search-field{min-height:48px;display:flex;align-items:center;gap:.75rem;border-bottom:1px solid var(--text)}
+    .search-field svg{width:18px;height:18px;flex:none}
+    .search-field input{width:100%;min-width:0;border:0;outline:0;background:transparent;padding:.7rem 0;color:var(--text)}
+    .search-field input::placeholder{color:var(--muted)}
+    .search-clear{min-width:44px;min-height:44px;cursor:pointer;color:var(--muted);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
+    .search-clear[hidden]{display:none}
+    .progress-copy{display:flex;justify-content:space-between;gap:1rem;margin-bottom:.55rem;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+    .progress-track{height:2px;background:var(--line);overflow:hidden}
+    .progress-bar{display:block;width:0;height:100%;background:var(--accent);transition:width .25s ease}
+    .filters{display:flex;flex-wrap:wrap;gap:.55rem;margin-bottom:2.4rem}
+    .filter{min-height:44px;padding:.65rem 1rem;border:1px solid var(--line);border-radius:var(--pill);font-size:.73rem;letter-spacing:.06em;cursor:pointer;transition:border-color .2s ease,background .2s ease,color .2s ease}
+    .filter:hover{border-color:var(--accent)}
+    .filter[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#171411}
+    .filter-count{margin-left:.35rem;opacity:.7}
+    .product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4.6rem 14px;align-items:start}
+    .load-more-wrap{display:flex;justify-content:center;padding-top:3.5rem}
+    .load-more-wrap[hidden]{display:none}
+    .load-more{min-height:48px;padding:.8rem 1.25rem;border:1px solid var(--text);border-radius:var(--pill);cursor:pointer;font-size:.75rem;letter-spacing:.06em;font-weight:500;transition:background .2s ease,color .2s ease}
+    .load-more:hover{background:var(--text);color:var(--bg)}
+    .product-card{min-width:0}
+    .product-card:nth-child(10n+1),.product-card:nth-child(10n+8){grid-column:span 2}
+    .product-card:nth-child(10n+1) .product-image,.product-card:nth-child(10n+8) .product-image{aspect-ratio:4/5}
+    .product-card[hidden]{display:none}
+    .product-image{position:relative;width:100%;aspect-ratio:3/4;overflow:hidden;background:var(--surface);cursor:pointer;text-align:left}
+    .product-image img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1),opacity .25s ease}
+    .product-image:hover img{transform:scale(1.025)}
+    .quick{position:absolute;left:50%;bottom:1rem;transform:translate(-50%,8px);opacity:0;background:#141210;color:#f4efe6;padding:.72rem 1rem;border-radius:var(--pill);font-size:.7rem;letter-spacing:.05em;white-space:nowrap;transition:.25s ease}
+    .product-image:hover .quick,.product-image:focus-visible .quick{opacity:1;transform:translate(-50%,0)}
+    .product-info{display:flex;justify-content:space-between;gap:1rem;padding-top:.85rem;border-top:1px solid var(--line);margin-top:.7rem}
+    .product-info h3{font-size:.83rem;line-height:1.4;font-weight:500;margin:0;letter-spacing:-.02em}
+    .product-info .price{font-size:.8rem;color:var(--muted)}
+    .product-type{margin:.28rem 0 0;font-size:.67rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+    .empty{display:none;padding:4rem 0;color:var(--muted)}
+    .story{position:relative;background:#141210;color:#f4efe6;overflow:hidden}
+    .story-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,7fr) minmax(360px,5fr);min-height:740px}
+    .story-word{position:absolute;z-index:2;left:-.035em;bottom:-.3em;font-family:var(--display);font-size:clamp(10rem,24vw,25rem);line-height:.72;letter-spacing:-.08em;color:#f4efe6;opacity:.12;pointer-events:none;white-space:nowrap}
+    .story-media{overflow:hidden;background:#d9d8d4}
+    .story-media img{width:100%;height:100%;object-fit:cover;object-position:center 28%}
+    .story-copy{padding:clamp(4rem,8vw,8rem) max(24px,calc((100vw - var(--max))/2)) clamp(4rem,8vw,8rem) clamp(2rem,6vw,6rem);display:flex;flex-direction:column;justify-content:center}
+    .story-copy .marker{color:var(--accent);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:2rem}
+    .story-copy p{color:#c9c1b6;max-width:43ch;font-size:1rem;margin:2rem 0 0}
+    .story-note{margin-top:auto!important;padding-top:3rem;border-top:1px solid rgba(244,239,230,.24);font-size:.77rem!important;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)!important}
+    .newsletter{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(320px,.7fr);align-items:end;gap:3rem;padding-block:var(--section);border-bottom:1px solid var(--line)}
+    .newsletter h2{max-width:9ch}
+    .newsletter-copy p{color:var(--muted);max-width:44ch}
+    .email-row{display:flex;align-items:center;border-bottom:1px solid var(--text);padding:.65rem 0;gap:1rem}
+    .email-row input{width:100%;border:0;outline:0;background:transparent;padding:.55rem 0;color:var(--text);min-width:0}
+    .email-row input::placeholder{color:var(--muted)}
+    .email-row button{flex:none;cursor:pointer;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em}
+    .email-hint{min-height:1.4em;margin:.55rem 0 0;color:var(--muted);font-size:.72rem}
+    footer{padding:2rem 0 3rem}
+    .footer-grid{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start}
+    .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:.75rem}
+    .footer-meta{text-align:right;font-size:.69rem;color:var(--muted);line-height:1.7}
+    dialog{width:min(980px,calc(100% - 30px));max-height:min(800px,calc(100dvh - 30px));padding:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg);color:var(--text);box-shadow:0 32px 90px rgba(0,0,0,.38);overflow:hidden}
+    dialog::backdrop{background:rgba(7,6,5,.76)}
+    .modal-grid{display:grid;grid-template-columns:1.05fr .95fr;max-height:min(800px,calc(100dvh - 30px))}
+    .modal-media{min-height:620px;background:var(--surface);overflow:hidden}
+    .modal-media img{width:100%;height:100%;object-fit:cover}
+    .modal-copy{padding:clamp(2rem,5vw,4rem);overflow-y:auto;display:flex;flex-direction:column;position:relative}
+    .modal-close{position:absolute;right:1.25rem;top:1.25rem;width:40px;height:40px;border:1px solid var(--line);border-radius:50%;cursor:pointer;display:grid;place-items:center;font-size:1.2rem}
+    .modal-type{margin:0 0 1.25rem;color:var(--accent);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
+    .modal-copy h2{font-size:clamp(2rem,4vw,4.2rem);line-height:.95;letter-spacing:-.065em;font-weight:400;margin:0 2.5rem 1rem 0}
+    .modal-price{font-size:1.05rem;color:var(--accent);margin:0 0 2rem}
+    .modal-description{color:var(--muted);white-space:pre-line;font-size:.86rem}
+    .size-label{margin:2rem 0 .65rem;font-size:.71rem;letter-spacing:.1em;text-transform:uppercase}
+    .sizes{display:flex;gap:.5rem}
+    .size{padding:.6rem .75rem;border:1px solid var(--line);border-radius:var(--pill);font-size:.7rem;color:var(--muted)}
+    .demo-disabled{margin-top:auto;padding-top:2rem}
+    .demo-disabled button{width:100%;padding:.95rem 1rem;border-radius:var(--pill);border:1px solid var(--line);color:var(--muted);cursor:not-allowed}
+    .demo-disabled small{display:block;text-align:center;margin-top:.65rem;color:var(--muted)}
+    .toast{position:fixed;z-index:20;left:50%;bottom:1.2rem;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--accent);color:#171411;border-radius:var(--pill);padding:.75rem 1rem;font-size:.75rem;transition:.25s ease;white-space:nowrap}
+    .toast.show{opacity:1;transform:translate(-50%,0)}
+    .reveal{opacity:1;transform:none}
+    @media (hover:hover) and (prefers-reduced-motion:no-preference){
+      .reveal{transition:transform .45s ease}
+      .reveal.pending{opacity:1;transform:translateY(10px)}
+    }
+    @media (max-width:1100px){
+      .hero-grid{grid-template-columns:1fr 1.25fr}.hero-copy{padding-left:24px;padding-right:2rem}
+      .product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .product-card:nth-child(10n+1),.product-card:nth-child(10n+8){grid-column:span 1}
+      .product-card:nth-child(10n+1) .product-image,.product-card:nth-child(10n+8) .product-image{aspect-ratio:3/4}
+      .categories{grid-template-rows:320px 270px}
+    }
+    @media (max-width:900px){
+      .hero{min-height:auto}.hero-grid{display:flex;flex-direction:column;min-height:auto}.hero-media{order:-1;height:74svh;min-height:520px}.hero-copy{padding:4rem 24px 3rem}.hero-copy h1{width:auto;max-width:7ch;text-shadow:none}.hero-shift{left:0}.hero-detail{margin-top:3.8rem}
+      .site-nav{position:absolute}.nav-inner{height:68px}
+      .story-grid{grid-template-columns:1fr}.story-media{height:72vw;max-height:700px}.story-copy{padding-inline:24px}
+      .editorial-intro{grid-template-columns:1fr;gap:1.5rem}.editorial-grid{grid-template-columns:1fr 1fr;grid-template-rows:minmax(480px,78vw) minmax(260px,45vw)}.editorial-look:first-child{grid-column:span 2;grid-row:auto}
+      .newsletter{grid-template-columns:1fr}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .collection-tools{grid-template-columns:1fr;gap:1.2rem}
+    }
+    @media (max-width:700px){
+      .shell{width:min(calc(100% - 32px),var(--max))}.nav-word{font-size:1.15rem}.nav-links a:nth-child(n+3){display:none}.nav-links{gap:1rem}.bag-button span{display:none}
+      .craft-list{grid-template-columns:1fr}.craft-list li{border-right:0;border-bottom:1px solid var(--line);padding:1rem}.craft-list li:last-child{border-bottom:0}
+      .editorial-grid{display:block}.editorial-look{min-height:390px;margin-bottom:10px}.editorial-look:last-child{margin-bottom:0}.editorial-intro h2{font-size:clamp(3.2rem,15vw,5.5rem)}
+      .section-head{display:block}.section-head p{margin-top:1rem}
+      .categories{grid-template-columns:1fr 1fr;grid-template-rows:260px 220px 260px}.category:nth-child(1){grid-row:span 2}.category:nth-child(4){grid-column:span 1}.category:nth-child(5){grid-column:span 2}.category-label{left:.8rem;right:.8rem;bottom:.8rem;display:block}.category-label span{display:block;margin-top:.2rem}
+      .modal-grid{display:flex;flex-direction:column;max-height:calc(100dvh - 18px)}dialog{width:calc(100% - 18px);max-height:calc(100dvh - 18px)}.modal-media{min-height:46dvh;height:46dvh;flex:none}.modal-copy{padding:1.5rem;min-height:45dvh}.modal-close{top:1rem;right:1rem;background:var(--bg)}
+      .footer-grid{grid-template-columns:1fr}.footer-meta{text-align:left}
+    }
+    @media (max-width:520px){
+      h1{font-size:clamp(3rem,16vw,5.2rem)}.hero-media{height:68svh;min-height:470px}.hero-copy{padding-top:3.2rem}.hero-detail{grid-template-columns:1fr}.hero-price{margin-top:.5rem}
+      .product-grid{grid-template-columns:1fr;gap-block:3.2rem}.product-image{aspect-ratio:4/5}.quick{opacity:1;transform:translate(-50%,0);background:rgba(20,18,16,.84)}
+      .newsletter h2{font-size:2.8rem}.email-row{align-items:flex-end}.email-row button{white-space:nowrap}.footer-links{display:grid;grid-template-columns:1fr 1fr}.hero-detail p{font-size:.85rem}.hero-copy{padding-bottom:2.5rem}
+      .toast{white-space:normal;width:calc(100% - 32px);text-align:center}
+    }
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}
+    }
+
+    /* Godly / LOEWE direction refinement */
+    :root{
+      color-scheme:light;
+      --bg:#f4f1ea;
+      --surface:#e9e5dc;
+      --surface-strong:#11110f;
+      --text:#11110f;
+      --text-on-dark:#f4f1ea;
+      --muted:#5a574f;
+      --accent:#66705a;
+      --accent-strong:#535c49;
+      --line:rgba(17,17,15,.22);
+      --line-light:rgba(244,241,234,.28);
+      --section:clamp(7rem,14vh,12rem);
+    }
+    .site-nav{position:fixed;z-index:15;color:#f4f1ea;transition:background-color .22s ease,color .22s ease,border-color .22s ease}
+    .site-nav::before{content:"";position:absolute;inset:0;background:var(--bg);opacity:0;transition:opacity .22s ease;z-index:-1}
+    .site-nav.is-solid{color:var(--text)}
+    .site-nav.is-solid::before{opacity:1}
+    .nav-inner{height:68px;border-bottom-color:rgba(244,241,234,.34)}
+    .site-nav.is-solid .nav-inner{border-bottom-color:var(--line)}
+    .nav-links a{font-size:12px;letter-spacing:.1em;font-weight:400}
+    .nav-meta{gap:.15rem}
+    .icon-button{width:44px;height:44px;display:grid;place-items:center;color:inherit;cursor:pointer}
+    .icon-button svg,.bag-button svg{width:18px;height:18px}
+    .bag-button{width:44px;min-width:44px;gap:0;color:inherit}
+    .bag-button span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+    .hero{height:100svh;min-height:680px;background:#11110f}
+    .hero-grid{display:block;width:100%;height:100%;min-height:0;position:relative}
+    .hero-media{position:absolute;inset:0;min-height:0;background:#11110f}
+    .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 24%;animation:hero-breathe 8s ease-in-out both}
+    .hero-media::after{background:rgba(26,20,12,.08);box-shadow:inset 0 -28vh 22vh -18vh rgba(26,20,12,.48)}
+    @keyframes hero-breathe{from{transform:scale(1)}to{transform:scale(1.06)}}
+    .hero-copy{position:absolute;z-index:3;inset:0;padding:0 clamp(1rem,2.4vw,2.5rem) clamp(1rem,2.5vw,2.5rem);display:block;color:#f4f1ea;pointer-events:none}
+    .hero-kicker{position:absolute;left:clamp(1rem,2.4vw,2.5rem);top:calc(68px + 1.2rem);margin:0;color:#f4f1ea;font-size:11px;letter-spacing:.1em}
+    h1.hero-wordmark{position:absolute;left:-.035em;bottom:-.09em;width:auto;margin:0;font-family:var(--display);font-size:clamp(9rem,20vw,24rem);line-height:.65;letter-spacing:-.085em;color:#f4f1ea;mix-blend-mode:difference;text-shadow:none;white-space:nowrap;text-wrap:balance}
+    .section-head h2,.story-copy h2,.newsletter h2,.featured-copy h2,.campaign-copy h2,.editorial-intro h2{text-wrap:balance}
+    .hero-detail{position:absolute;right:clamp(1rem,2.4vw,2.5rem);top:calc(68px + 1.2rem);width:min(31rem,42vw);margin:0;padding:0;border:0;grid-template-columns:1fr auto;color:#f4f1ea;pointer-events:auto}
+    .hero-detail p{color:inherit;font-size:12px;letter-spacing:.02em;max-width:34ch}
+    .hero-price{color:inherit;font-size:12px;font-weight:400}
+    .hero-link{position:absolute;right:clamp(1rem,2.4vw,2.5rem);bottom:clamp(1.5rem,3vw,3rem);z-index:4;color:#f4f1ea;font-size:12px;letter-spacing:.08em;text-transform:uppercase;pointer-events:auto;border-bottom:1px solid currentColor;padding-bottom:.15rem}
+    .hero-index{display:none}
+    .craft{background:var(--bg)}
+    .craft-list li{font-size:11px;font-weight:400}
+
+    .editorial{width:100%;padding:var(--section) 0;border-bottom:0;overflow:hidden}
+    .editorial-intro{width:min(calc(100% - 48px),var(--max));margin:0 auto clamp(4rem,10vh,7rem);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(270px,.5fr);gap:5vw;align-items:end}
+    .editorial-intro h2,.section-head h2,.story-copy h2,.newsletter h2{font-family:var(--display);font-size:clamp(4rem,8vw,9.2rem);line-height:.8;letter-spacing:-.065em;text-transform:uppercase;font-weight:400}
+    .editorial-intro p,.section-head p{font-size:clamp(1rem,1.25vw,1.125rem);line-height:1.55}
+    .editorial-links,.featured-links{display:flex;gap:1.4rem;flex-wrap:wrap;margin-top:1.6rem}
+    .editorial-links a,.featured-links a{font-size:12px;letter-spacing:.04em;border-bottom:1px solid transparent;padding-bottom:.15rem}
+    .editorial-links a:hover,.featured-links a:hover{border-bottom-color:currentColor}
+    .editorial-grid{position:relative;display:block;width:100%;min-height:150vw;max-height:2300px}
+    .editorial-look{position:absolute;display:block;margin:0;background:var(--surface);overflow:hidden}
+    .editorial-look:first-child{left:0;top:0;width:55vw;height:74vw;max-height:1120px}
+    .editorial-look:nth-child(2){right:4vw;top:28vw;width:30vw;height:40vw;max-height:620px}
+    .editorial-look:nth-child(3){left:31vw;bottom:0;width:45vw;height:60vw;max-height:920px}
+    .editorial-look img{width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform 1.2s ease-out}
+    .editorial-look.is-inview img{transform:scale(1.05)}
+    .editorial-look::after{background:none;box-shadow:none}
+    .look-caption{left:1rem;right:1rem;bottom:1rem;align-items:flex-end;color:#f4f1ea;mix-blend-mode:difference}
+    .look-caption strong{font-size:clamp(2.4rem,5.2vw,6.2rem);line-height:.8;letter-spacing:-.055em;max-width:8ch}
+    .look-caption span{font-size:11px}
+
+    .featured{padding:var(--section) 0;background:var(--surface)}
+    .featured-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);min-height:88vh;align-items:stretch}
+    .featured-copy{padding:clamp(4rem,9vw,9rem) clamp(2rem,7vw,8rem) clamp(4rem,9vw,9rem) max(24px,calc((100vw - var(--max))/2));display:flex;flex-direction:column;justify-content:center}
+    .featured-copy .eyebrow{font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 2.5rem;color:var(--muted)}
+    .featured-copy h2{font-family:var(--display);font-size:clamp(3.4rem,6.4vw,7.7rem);line-height:.82;letter-spacing:-.065em;text-transform:uppercase;font-weight:400;margin:0;max-width:8ch}
+    .featured-copy p{font-size:clamp(1rem,1.25vw,1.125rem);color:var(--muted);max-width:35ch;margin:2.2rem 0 0}
+    .featured-media{overflow:hidden;min-height:70vh}
+    .featured-media img{width:100%;height:100%;object-fit:cover;object-position:center 20%;transition:transform 1.2s ease-out}
+    .featured-media.is-inview img{transform:scale(1.05)}
+
+    .campaign-rhythm{width:100%;background:var(--bg)}
+    .campaign-frame{width:100%;height:94svh;min-height:620px;overflow:hidden;background:var(--surface)}
+    .campaign-frame img{width:100%;height:100%;object-fit:cover;object-position:center 22%;transition:transform 1.2s ease-out}
+    .campaign-frame.is-inview img{transform:scale(1.05)}
+    .campaign-copy{padding:clamp(6rem,14vh,11rem) max(24px,calc((100vw - var(--max))/2));display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.45fr);gap:6vw;align-items:end}
+    .campaign-copy h2{font-family:var(--display);font-size:clamp(4rem,8vw,9.2rem);line-height:.88;letter-spacing:-.065em;text-transform:uppercase;font-weight:400;margin:0;max-width:8ch;padding:.08em 0}
+    .campaign-copy p{font-size:clamp(1rem,1.25vw,1.125rem);color:var(--muted);max-width:37ch;margin:0}
+
+    .section{padding-block:var(--section)}
+    .section-head{margin-bottom:clamp(3rem,8vh,6rem);align-items:end}
+    .section-head h2{max-width:9ch}
+    .categories{grid-template-columns:1fr 1fr;grid-template-rows:72vw 58vw 58vw;gap:clamp(2rem,6vw,7rem)}
+    .category:nth-child(1),.category:nth-child(4),.category:nth-child(5){grid-column:auto;grid-row:auto}
+    .category{color:#f4f1ea}
+    .category::after{background:rgba(0,0,0,.12);box-shadow:none}
+    .category img{transition:transform 1.2s ease-out}
+    .category.is-inview img{transform:scale(1.05)}
+    .category-label{align-items:flex-end;mix-blend-mode:difference}
+    .category-label strong{font-family:var(--display);font-size:clamp(2rem,4vw,4.8rem);line-height:.85;font-weight:400;text-transform:uppercase}
+    .category-label span{font-size:11px}
+
+    .shop-section{padding-bottom:var(--section)}
+    .collection-tools{margin-bottom:2rem}
+    .filters{gap:.4rem;margin-bottom:clamp(4rem,8vh,7rem)}
+    .filter{border-radius:0;border-width:0 0 1px;padding:.65rem .2rem;margin-right:1rem;min-height:44px;font-size:11px}
+    .filter[aria-pressed="true"]{background:transparent;color:var(--text);border-color:var(--text)}
+    .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(5rem,12vh,9rem) clamp(3rem,7vw,8rem)}
+    .product-card:nth-child(10n+1),.product-card:nth-child(10n+8){grid-column:span 1}
+    .product-card:nth-child(10n+1) .product-image,.product-card:nth-child(10n+8) .product-image,.product-image{aspect-ratio:3/4}
+    .product-image img{position:absolute;inset:0;transition:opacity .08s linear,transform 1.2s ease-out}
+    .product-image .product-alt{opacity:0}
+    .product-image:hover .product-main,.product-image:focus-visible .product-main{opacity:0}
+    .product-image:hover .product-alt,.product-image:focus-visible .product-alt{opacity:1}
+    .product-card.is-inview .product-image img{transform:scale(1.05)}
+    .product-image:hover img{transform:scale(1.05)}
+    .quick{left:1rem;right:1rem;bottom:1rem;transform:translateY(4px);border-radius:0;text-align:center;font-size:11px;background:#11110f;color:#f4f1ea}
+    .product-image:hover .quick,.product-image:focus-visible .quick{transform:none}
+    .product-info{display:block;padding-top:.75rem;margin-top:0;border-top:0;text-align:left}
+    .product-info h3{font-size:12px;line-height:1.55;font-weight:400;letter-spacing:.01em;margin:0;text-transform:uppercase}
+    .product-info .price{font-size:12px;color:inherit;font-weight:400}
+    .product-index{font-size:12px;color:var(--muted);margin:0 0 .15rem}
+    .product-type{font-size:11px;margin:.15rem 0 0}
+
+    .story{min-height:95vh;background:#11110f}
+    .story-grid{min-height:95vh;grid-template-columns:minmax(0,1.2fr) minmax(360px,.8fr)}
+    .story-word{font-size:clamp(10rem,20vw,24rem);opacity:1;mix-blend-mode:difference;bottom:-.15em}
+    .story-media img{transition:transform 1.2s ease-out}
+    .story-media.is-inview img{transform:scale(1.05)}
+    .story-copy h2{font-size:clamp(4rem,7vw,8rem)}
+    .story-copy .marker{font-size:11px;color:#f4f1ea}
+    .story-copy p{font-size:clamp(1rem,1.25vw,1.125rem);color:#d7d2c8}
+    .story-note{font-size:11px!important;color:#f4f1ea!important}
+    .newsletter{padding-block:var(--section)}
+    .newsletter h2{font-size:clamp(4rem,8vw,9rem)}
+
+    .editorial-intro h2,.section-head h2{line-height:.88;padding:.08em 0}
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease-out,transform .6s ease-out}
+    .reveal.visible{opacity:1;transform:none}
+    @media (hover:hover) and (prefers-reduced-motion:no-preference){.reveal.pending{opacity:0;transform:translateY(22px)}}
+    .editorial-intro.reveal,.featured-copy.reveal,.campaign-copy.reveal,.categories.reveal,.collection-tools.reveal,.filters.reveal,.product-card.reveal,.newsletter>div.reveal:not(.newsletter-copy){opacity:1}
+
+    @media (max-width:900px){
+      .hero{height:100svh;min-height:620px}.hero-grid{height:100%;display:block}.hero-media{height:auto;min-height:0;order:initial}.hero-copy{position:absolute;padding:0 16px 20px}.hero-copy h1{max-width:none}
+      .hero-detail{left:16px;right:16px;top:auto;bottom:clamp(8.5rem,24vw,12rem);width:auto}.hero-link{right:16px;bottom:20px}
+      h1.hero-wordmark{font-size:24vw;left:-.03em;bottom:.07em}
+      .editorial-intro{grid-template-columns:1fr;gap:1.5rem;width:calc(100% - 32px)}
+      .editorial-grid{min-height:220vw}.editorial-look:first-child{width:78vw;height:106vw}.editorial-look:nth-child(2){top:82vw;right:0;width:48vw;height:65vw}.editorial-look:nth-child(3){left:12vw;width:65vw;height:86vw}
+      .featured-grid{grid-template-columns:1fr}.featured-copy{padding:6rem 24px}.featured-media{min-height:78vh;order:-1}
+      .campaign-copy{grid-template-columns:1fr;padding:6rem 24px;gap:2rem}.campaign-frame{height:90svh}
+      .categories{grid-template-columns:1fr 1fr;grid-template-rows:none;gap:4rem 1rem}.category{aspect-ratio:3/4}.category:nth-child(1){grid-column:span 2;aspect-ratio:4/5}
+      .story-grid{grid-template-columns:1fr}.story-media{height:82vh;max-height:none}.story-copy{padding:7rem 24px;min-height:72vh}
+    }
+    @media (max-width:700px){
+      .nav-inner.shell{width:100%;margin:0;padding-inline:12px}.nav-links a:nth-child(n+3){display:flex}.nav-links a{font-size:10px}.nav-links{gap:.7rem;min-width:0}.nav-meta{gap:0;flex:none;margin-right:28px}.icon-button{width:34px}.bag-button{width:34px;min-width:34px}
+      .editorial-links,.featured-links{gap:1rem}
+      .categories{grid-template-columns:1fr;gap:4rem}.category:nth-child(1){grid-column:auto;aspect-ratio:3/4}
+      .product-grid{grid-template-columns:1fr;gap:5rem}.product-image{aspect-ratio:3/4}
+      .section-head{display:grid;gap:1.5rem}.section-head p{margin-top:0}
+    }
+    @media (max-width:520px){
+      .hero-media{height:auto;min-height:0}.hero-copy{padding-top:0;padding-bottom:16px}.hero-detail{grid-template-columns:1fr auto}.hero-kicker{left:16px}.hero-link{right:16px;bottom:16px}.quick{opacity:0}.product-image:focus-visible .quick{opacity:1}
+      .editorial-intro h2,.section-head h2,.newsletter h2{font-size:clamp(3.6rem,18vw,6rem)}
+      .footer-links{grid-template-columns:1fr 1fr}
+    }
+    @media (prefers-reduced-motion:reduce){
+      .hero-media img{animation:none}.reveal{opacity:1;transform:none}.editorial-look img,.featured-media img,.category img,.product-image img,.story-media img{transform:none!important}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-nav" aria-label="Primary navigation">
+    <div class="service-strip" role="note"><span>Complimentary shipping across India</span><span class="dot" aria-hidden="true">·</span><span>Easy 7-day returns</span><span class="dot" aria-hidden="true">·</span><span>Made in New Delhi</span></div>
+    <div class="nav-inner shell">
+      <nav class="nav-links" aria-label="Shop navigation">
+        <a href="#shop">Shop</a>
+        <a href="#story">Story</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-meta" aria-label="Utility navigation">
+        <a class="icon-button" href="#shop" aria-label="Search the collection">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.25 4.25"/></svg>
+        </a>
+        <button class="icon-button account-icon" type="button" id="accountButton" aria-label="Account sign-in, unavailable in demo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5.5 20c.7-4 3-6 6.5-6s5.8 2 6.5 6"/></svg>
+        </button>
+        <button class="icon-button" type="button" id="wishlistButton" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 20.5C7 16.5 3.5 13.3 3.5 9.6 3.5 7 5.5 5 8 5c1.6 0 3.1.8 4 2.1C12.9 5.8 14.4 5 16 5c2.5 0 4.5 2 4.5 4.6 0 3.7-3.5 6.9-8.5 10.9Z"/></svg><span class="wishlist-count" id="wishlistCount" hidden>0</span>
+        </button>
+        <button class="bag-button" type="button" id="bagButton" aria-label="Shopping bag, demo only">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5.5 8.5h13l1 12h-15l1-12Z"/><path d="M9 9V6.5a3 3 0 0 1 6 0V9"/></svg><span>Bag</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-media">
+          <img src="assets/beige-quilted-jacket_1.jpg" alt="Model wearing the Beige Quilted Jacket" width="900" height="1200" fetchpriority="high">
+        </div>
+        <div class="hero-copy">
+          <p class="hero-kicker">Quilted silk · New Delhi</p>
+          <div class="hero-detail">
+            <p>A lightly padded kimono jacket, washed soft and made for a slower rhythm.</p>
+            <span class="hero-price price">₹11,000</span>
+          </div>
+          <h1 class="hero-wordmark" id="hero-title">iswas</h1>
+          <a class="hero-link" href="#shop" data-filter-link="Jackets">Shop jackets</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="craft">
+      <ul class="craft-list shell" aria-label="Making principles">
+        <li>Small-batch making</li>
+        <li>Natural materials</li>
+        <li>Made to wear, and rewear</li>
+      </ul>
+    </div>
+
+    <section class="editorial" aria-labelledby="editorial-title">
+      <div class="editorial-intro reveal">
+        <h2 id="editorial-title">Volume,<br>surface,<br>repair.</h2>
+        <div>
+          <p>Three signatures of the collection: softened structure, graphic handwork and cloth that carries its making on the surface.</p>
+          <div class="editorial-links"><a href="#shop" data-filter-link="Dress">Shop dresses</a><a href="#story">Read the story</a></div>
+        </div>
+      </div>
+      <div class="editorial-grid">
+        <figure class="editorial-look reveal scale-media">
+          <img src="assets/reds-boro-dress_1.jpg" alt="Model wearing the Reds Boro Dress" width="900" height="1200">
+          <figcaption class="look-caption"><strong>Patchwork,<br>re-cut.</strong><span>01 — Reds Boro Dress</span></figcaption>
+        </figure>
+        <figure class="editorial-look reveal scale-media">
+          <img src="assets/disq-cyan-t-shirt_1.jpg" alt="Model wearing the Cyan Disq T-Shirt" width="900" height="1200">
+          <figcaption class="look-caption"><strong>Dot<br>study.</strong><span>02 — Cyan Disq T-Shirt</span></figcaption>
+        </figure>
+        <figure class="editorial-look reveal scale-media">
+          <img src="assets/silver-tote_1.jpg" alt="Silver denim tote with a metallic hand print" width="900" height="1350">
+          <figcaption class="look-caption"><strong>Utility,<br>flashed.</strong><span>03 — Silver Tote</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="featured" aria-labelledby="featured-title">
+      <div class="featured-grid">
+        <div class="featured-copy reveal">
+          <p class="eyebrow">Featured — 01</p>
+          <h2 id="featured-title">The quilted jacket.</h2>
+          <p>Fine silk, lightly padded and washed until the surface softens. A kimono form made for layering, lounging and living in.</p>
+          <div class="featured-links"><a href="#shop" data-filter-link="Jackets">Shop jackets</a><a href="#story">Shop the story</a></div>
+        </div>
+        <div class="featured-media scale-media"><img src="assets/beige-quilted-jacket_2.jpg" alt="Detail of the Beige Quilted Jacket" width="900" height="1197" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section class="campaign-rhythm" aria-labelledby="campaign-title">
+      <div class="campaign-frame scale-media"><img src="assets/burgundy-boat-neck-dress_1.jpg" alt="Model wearing the Burgundy Boat Neck Dress" width="900" height="1349" loading="lazy"></div>
+      <div class="campaign-copy reveal">
+        <h2 id="campaign-title">Cloth in<br>motion.</h2>
+        <div>
+          <p>Relaxed silk, hand-screened line by line. Structure arrives through print, then loosens with every wear.</p>
+          <div class="editorial-links"><a href="#shop" data-filter-link="Dress">Shop dresses</a><a href="#story">Inside the studio</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" aria-labelledby="categories-title">
+      <div class="section-head reveal">
+        <h2 id="categories-title">Find your shape.</h2>
+        <p>Relaxed silhouettes, bold surface work and pieces that grow more personal with time.</p>
+      </div>
+      <div class="categories reveal" id="categories"></div>
+    </section>
+
+    <section class="shop-section shell" id="shop" aria-labelledby="shop-title">
+      <div class="section-head reveal">
+        <h2 id="shop-title">The collection.</h2>
+        <p id="resultsNote" aria-live="polite">46 pieces</p>
+      </div>
+      <div class="collection-tools reveal">
+        <label class="search-field" for="searchInput">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.25 4.25"/></svg>
+          <input id="searchInput" type="search" autocomplete="off" aria-label="Search the collection" placeholder="Search by piece or category">
+          <button class="search-clear" type="button" id="clearSearch" hidden>Clear</button>
+        </label>
+        <div class="result-progress" aria-label="Collection viewing progress">
+          <div class="progress-copy"><span id="progressText">12 of 46 shown</span><span id="progressPercent">26%</span></div>
+          <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="46" aria-valuenow="12" id="progressTrack"><span class="progress-bar" id="progressBar"></span></div>
+        </div>
+      </div>
+      <div class="filters reveal" id="filters" aria-label="Filter products"></div>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty" id="emptyState">No pieces match that search.</p>
+      <div class="load-more-wrap" id="loadMoreWrap"><button class="load-more" type="button" id="loadMore">Show 12 more&nbsp; ↓</button></div>
+    </section>
+
+    <section class="craft shell" aria-labelledby="craft-title">
+      <div class="section-head reveal">
+        <span class="marker">Fabric notes</span>
+        <h2 id="craft-title">Know your cloth.</h2>
+        <p>Three techniques behind the collection — the slow work that makes each piece.</p>
+      </div>
+      <div class="craft-grid reveal">
+        <article><span class="craft-index">01</span><h3>Boro</h3><p>Patchwork inspired by the Japanese art of repairing textiles — offcuts given a second life in 100% cotton.</p></article>
+        <article><span class="craft-index">02</span><h3>Quilting</h3><p>Fine silk, lightly padded, layered and hand-quilted, then washed for softness and texture.</p></article>
+        <article><span class="craft-index">03</span><h3>Hand screen print</h3><p>Every print pulled by hand. It stiffens the silk and marks each piece as made, not manufactured.</p></article>
+      </div>
+    </section>
+
+    <section class="story" id="story" aria-labelledby="story-title">
+      <span class="story-word" aria-hidden="true">iswas</span>
+      <div class="story-grid">
+        <div class="story-media"><img src="assets/blues-boro-dress_1.jpg" alt="Model wearing the Blues Boro Dress, a patchwork-inspired cotton piece" width="900" height="1200"></div>
+        <div class="story-copy">
+          <span class="marker">Notes from the studio</span>
+          <h2 id="story-title">Past craft.<br>Future form.</h2>
+          <p>iswas is a clothing label that values tradition and innovation. We take a slow-fashion approach, working closely with materials to create garments and objects with a distinct point of view.</p>
+          <p class="story-note">Designed in New Delhi</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter shell" id="contact" aria-labelledby="contact-title">
+      <div class="newsletter-copy reveal">
+        <h2 id="contact-title">Keep in touch.</h2>
+        <p>New work, studio notes and the occasional invitation.</p>
+      </div>
+      <div class="reveal">
+        <div class="email-row">
+          <input id="emailInput" type="email" inputmode="email" autocomplete="email" placeholder="Your email address" aria-label="Your email address">
+          <button type="button" id="emailButton">Email studio</button>
+        </div>
+        <p class="email-hint" id="emailHint" role="status">Opens a pre-addressed email to the studio.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell">
+    <div class="footer-grid">
+      <div class="footer-links">
+        <a href="mailto:iswasstudio@gmail.com">Contact</a>
+        <a href="tel:+917042445008">+91 70424 45008</a>
+        <a href="#story">About</a>
+        <a href="#shop">Shop</a>
+      </div>
+      <div class="footer-meta">New Delhi, India<br>Small-batch clothing and objects.
+        <div class="footer-legal"><a href="#" id="privacyLink">Privacy</a><a href="#" id="termsLink">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="quickView" aria-labelledby="modalTitle">
+    <div class="modal-grid">
+      <div class="modal-media"><img id="modalImage" src="assets/beige-quilted-jacket_2.jpg" width="900" height="1197" alt="Alternate view of the Beige Quilted Jacket"></div>
+      <div class="modal-copy">
+        <button class="modal-close" type="button" id="modalClose" aria-label="Close quick view">×</button>
+        <p class="modal-type" id="modalType"></p>
+        <h2 id="modalTitle"></h2>
+        <p class="modal-price price" id="modalPrice"></p>
+        <p class="modal-description" id="modalDescription"></p>
+        <p class="size-label">Size options shown in the live store</p>
+        <div class="sizes" aria-hidden="true"><span class="size">S</span><span class="size">M</span><span class="size">L</span></div>
+        <div class="demo-disabled"><button type="button" disabled>Shopping unavailable in this demo</button><small>This prototype does not place orders.</small></div>
+      </div>
+    </div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite">Shopping is disabled in this design prototype.</div>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script>
+    let lenis=null;
+    if(!matchMedia('(prefers-reduced-motion: reduce)').matches && window.Lenis){
+      lenis=new Lenis({duration:1.15,smoothWheel:true});
+      const rafLoop=t=>{lenis.raf(t);requestAnimationFrame(rafLoop);};
+      requestAnimationFrame(rafLoop);
+    }
+    function smoothScrollTo(el){
+      if(lenis){ lenis.scrollTo(el,{offset:-70}); return; }
+      el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+    }
+    const products = [{"title":"MARBLED SMOCK DRESS","handle":"marbled-smock-dress","price":16000.0,"type":"Dress","description":"- A LONG SLEEVE DRESS WITH QUILTED DETAILS ON FRONT AND VOLUME IN THE BACK FROM GATHERS IN THE YOKE. -SHIRT DRESS WITH A STAND COLLAR ,I N DENIM WITH A WASHED FINISH THAT BECOMES MORE BEAUTIFUL WITH TIME. -THE DRESS HAS A RELAXED SILHOUETTE WITH ON SEAM SIDE POCKETS. -THE DRESS IS 100% COTTON AND CAN BE COMFORTABLY WORN THROUGH THE SEASONS. IT CAN BE PAIRED WITH STOCKINGS OR WORN ON ITS OWN.","images":["images/marbled-smock-dress_1.jpg","images/marbled-smock-dress_2.jpg"]},{"title":"CORAL V NECK DRESS","handle":"coral-v-neck-dress","price":12000.0,"type":"Dress","description":"-A BRIGHT DRESS IN CORAL COTTON SILK WITH CREAM VERTICAL STRIPES.A SLIP IS INCLUDED. -V-NECK WITH DROPPED ARMHOLES. -FLOWY FIT WITH A BELT TO CINCH THE WAIST . -PLEATED DETAILS ON FRONT AND BACK -THE DRESS HAS A RELAXED SILHOUETTE WITH ON SEAM SIDE POCKETS.","images":["images/coral-v-neck-dress_1.jpg","images/coral-v-neck-dress_2.jpg"]},{"title":"YELLOW V NECK DRESS","handle":"yellow-v-neck-dress","price":12000.0,"type":"Dress","description":"-A BRIGHT DRESS IN YELLOW COTTON SILK WITH CREAM VERTICAL STRIPES.A SLIP IS INCLUDED. -V-NECK WITH DROPPED ARMHOLES. -FLOWY FIT WITH A BELT TO CINCH THE WAIST . -PLEATED DETAILS ON FRONT AND BACK -THE DRESS HAS A RELAXED SILHOUETTE WITH ON SEAM SIDE POCKETS.","images":["images/yellow-v-neck-dress_1.jpg","images/yellow-v-neck-dress_2.jpg"]},{"title":"STRIPED PANT","handle":"striped-pant","price":7800.0,"type":"BOTTOMS","description":"-STRAIGHT PANT HAS A GATHERED ELASTICATED WAIST AND TURN UP HEM. -A RELAXED SILHOUETTE WITH ON SEAM SIDE POCKETS. -THE PRINT MAKES THE PANT STIFF AND STRUCTURED. IT CAN BE PAIRED WITH STRIPED SHIRT. -THE PANT IS 100% COTTON AND CAN BE COMFORTABLY WORN THROUGH THE SEASONS.","images":["images/striped-pant_1.jpg","images/striped-pant_2.jpg"]},{"title":"STRIPED SHIRT","handle":"striped-shirt","price":7400.0,"type":"TOPS","description":"-A ROUND NECK SHIRT WITH HAND SCREEN PRINTED STRIPES. -THIS PULLOVER SHIRT HAS A CURVED TAIL HEM AND ON SEAM POCKETS AND A BACK TWO BUTTON PLACKET . -THE SHIRT HAS A MENSWEAR FEEL MADE SOFTER BY THE COLLARLESS NECK. -THE PRINT MAKES THE SHIRT STIFF AND STRUCTURED. IT CAN BE PAIRED WITH STRIPED PANT. -100% COTTON","images":["images/striped-shirt_1.jpg","images/striped-shirt_2.jpg"]},{"title":"DENIM U DRESS","handle":"denim-u-dress","price":14000.0,"type":"Dress","description":"-MIDI DRESS WITH A BOAT NECK AND PLEATED DETAILS ON FRONT AND BACK. -SQAURE ARMHOLES WITH THREE QUARTER LENGTH SLEEVES AND CURVED FRONT HEMLINE. -IN WASHED DENIM THAT BECOMES MORE BEAUTIFUL WITH TIME. -THE DRESS HAS A RELAXED SILHOUETTE WITH ON SEAM SIDE POCKETS. -THE DRESS IS 100% COTTON AND CAN BE COMFORTABLY WORN THROUGH THE SEASONS. IT CAN BE PAIRED WITH STOCKINGS OR WORN ON ITS OWN.","images":["images/denim-u-dress_1.jpg","images/denim-u-dress_2.jpg"]},{"title":"BEIGE STRIPE WIDE PANTS","handle":"wide-pants-beige-stripe","price":6800.0,"type":"BOTTOMS","description":"-WIDE STRAIGHT PANT HAS A GATHERED ELASTICATED WAIST WITH A HAND STRIPE PRINT -THE PANT HAS DEEP FRONT AND BACK PLEATS. -A RELAXED OVERSIZED SILHOUETTE WITH ON SEAM SIDE POCKETS. -THE PANT IS 100% COTTON AND CAN BE COMFORTABLY WORN THROUGH THE SEASONS. -IT CAN BE PAIRED WITH THE TEE TOP IN THE SAME PRINT OR WORN WITH A PLAIN WHITE TEE. -MODEL'S HEIGHT IS 5'10\"","images":["images/wide-pants-beige-stripe_1.jpg","images/wide-pants-beige-stripe_2.jpg"]},{"title":"RED STRIPE WIDE PANTS","handle":"red-stripe-wide-pants","price":6800.0,"type":"BOTTOMS","description":"-WIDE STRAIGHT PANT HAS A GATHERED ELASTICATED WAIST WITH A HAND STRIPE PRINT . -THE PANT HAS DEEP FRONT AND BACK PLEATS. -A RELAXED OVERSIZED SILHOUETTE WITH ON SEAM SIDE POCKETS. -THE PANT IS 100% COTTON AND CAN BE COMFORTABLY WORN THROUGH THE SEASONS. -IT CAN BE PAIRED WITH THE TEE TOP IN THE SAME PRINT OR WORN WITH A PLAIN WHITE TEE. -MODEL'S HEIGHT IS 5'10\"","images":["images/red-stripe-wide-pants_1.jpg","images/red-stripe-wide-pants_2.jpg"]},{"title":"BEIGE TEE TOP","handle":"tee-top-beige","price":6200.0,"type":"TOPS","description":"-THIS HAND-PRINTED WOVEN T-SHIRT HAS HALF SLEEVES. -AN EASY ROUND NECKLINE WITH A BUTTON PLACKET ON THE SHOULDER. -FEATURES SHAPED SIDE VENTS FOR ADDED STYLE. -TWO FRONT PATCH POCKETS .MADE FROM 100% COTTON. -THIS VERSATILE TOP IS PERFECT FOR ANY SEASON AND CAN BE PAIRED WITH THE MATCHING STRIPED PANTS FOR A COMPLETE LOOK. -MODEL'S HEIGHT IS 5'10\"","images":["images/tee-top-beige_1.jpg","images/tee-top-beige_2.jpg"]},{"title":"RED TEE TOP","handle":"tee-top-red","price":6200.0,"type":"TOPS","description":"-THIS HAND-PRINTED WOVEN T-SHIRT HAS HALF SLEEVES. -AN EASY ROUND NECKLINE WITH A BUTTON PLACKET ON THE SHOULDER. -IT ALSO FEATURES SHAPED SIDE VENTS FOR ADDED STYLE. -TWO FRONT PATCH POCKETS . -MADE FROM 100% COTTON. -THIS VERSATILE TOP IS PERFECT FOR ANY SEASON AND CAN BE PAIRED WITH THE MATCHING RED-STRIPED PANTS FOR A COMPLETE LOOK. -MODEL'S HEIGHT IS 5'10\"","images":["images/tee-top-red_1.jpg","images/tee-top-red_2.jpg"]},{"title":"RED SMOCK BLOUSE","handle":"smock-top-red","price":7200.0,"type":"TOPS","description":"-A LIGHT COTTON BLOUSE WITH A FRONT BUTTON PLACKET . - THE SHOULDERS ARE DROPPED ,FRONT QUILTED YOKE FINISHES IN GATHERS. -THE BACK IS A LITTLE LONGER.THE CUFFS ARE ELASTICATED AND FINE BAND COLLAR IS DECORATED WITH FINE RUFFLES. -ON SEAM POCKETS FOR ESSENTIALS . -A PERFECT LIGHT SUMMERY BLOUSE FOR A HOT DAY. -100% COTTON","images":["images/smock-top-red_1.jpg","images/smock-top-red_2.jpg"]},{"title":"SILVER TOTE","handle":"silver-tote","price":5200.0,"type":"things","description":"-THE SILVER DENIM TOTE IS A FUNCTIONAL STYLISH BAG WITH A METALLIC HANDPRINT. -IT HAS STURDY HANDLES AND A SPACIOUS INTERIOR WITH POCKETS FOR ORGANISATION. -CRAFTED WITH ATTENTION TO DETAIL, THE BAG OFFERS A WELL- ORGANISED INTERIOR WITH SPECIFIC POCKETS FOR YOUR VALUABLES, LAPTOP, GLASSES, AND PHONE. -THIS THOUGHTFUL DESIGN HELPS KEEP YOUR BELONGINGS STRUCTURED, MAKING IT A PRACTICAL CHOICE FOR D","images":["images/silver-tote_1.jpg","images/silver-tote_2.jpg"]},{"title":"GOLD TOTE","handle":"gold-tote","price":5200.0,"type":"things","description":"-THE GOLD DENIM TOTE IS A FUNCTIONAL STYLISH BAG WITH A METALLIC HANDPRINT. -IT HAS STURDY HANDLES AND A SPACIOUS INTERIOR WITH POCKETS FOR ORGANISATION. -CRAFTED WITH ATTENTION TO DETAIL, THE BAG OFFERS A WELL- ORGANISED INTERIOR WITH SPECIFIC POCKETS FOR YOUR VALUABLES, LAPTOP, GLASSES, AND PHONE. -THIS THOUGHTFUL DESIGN HELPS KEEP YOUR BELONGINGS STRUCTURED, MAKING IT A PRACTICAL CHOICE FOR DAI","images":["images/gold-tote_1.jpg","images/gold-tote_2.jpg"]},{"title":"BLACK DISQ T-SHIRT","handle":"disq-black-n-white-t-shirt","price":6800.0,"type":"TOPS","description":"-THIS UNISEX T-SHIRT HAS A BOXY FIT WITH A WIDE BODY AND DROPPED SHOULDERS. -IT FEATURES DENIM SIDE PANELS AND A RIBBED NECKLINE. -THE BOLD LARGE WHITE DOT IS HAND PRINTED AND ADDS A STRIKING PLAYFUL ACCENT. -MODEL'S HEIGHT IS 5'8\" WEARING SIZE M","images":["images/disq-black-n-white-t-shirt_1.jpg","images/disq-black-n-white-t-shirt_2.jpg"]},{"title":"RED GATHER BLOUSE","handle":"red-gather-blouse","price":7400.0,"type":"TOPS","description":"-A STRIPED LIGHT COTTON BLOUSE WITH A HALF-BUTTON PLACKET. -THE DROPPED SHOULDERS ARE DELICATELY GATHERED AND THE BACK IS A LITTLE LONGER. -THE CUFFS AND BAND COLLAR ARE DECORATED WITH FINE RUFFLES. -IT HAS ON SEAM POCKETS FOR ESSENTIALS . -A PERFECT LIGHT SUMMERY BLOUSE FOR A HOT DAY. -100% COTTON -MODEL'S HEIGHT IS 5'10\" WEARING SIZE S/M","images":["images/red-gather-blouse_1.jpg","images/red-gather-blouse_2.jpg"]},{"title":"BURGUNDY BOAT NECK DRESS","handle":"burgundy-boat-neck-dress","price":14000.0,"type":"Dress","description":"-THE DRESS IS MADE OF TIGHTLY WOVEN CRISP SILK WITH HAND SCREEN PRINTED STRIPES ALL OVER. -THE FIT IS RELAXED AND OVERSIZED , EASY TO WEAR.THE DRESS'S NECK HAS A GATHERED DETAIL , RAGLAN SLEEVES AND ON SEAM POCKETS. -IT CAN BE WORN WITH THE BURGUNDY WITH CHARCOAL PINSTRIPE PANTS . -100% SILK","images":["images/burgundy-boat-neck-dress_1.jpg","images/burgundy-boat-neck-dress_2.jpg"]},{"title":"BURGUNDY WITH CHARCOAL PINSTRIPE PANT","handle":"burgundy-with-charcoal-pinstripe-pant","price":8400.0,"type":"BOTTOMS","description":"-THE PANT IS MADE OF TIGHTLY WOVEN CRISP SILK WITH HAND SCREEN PRINTED FINE STRIPES ALL OVER. -THE ROOMY FIT WITH AN ELASTIC WAIST AND AN INSIDE DRAWSTRING MAKES IT STRESS FREE AND EASY TO WEAR . -THE ANKLE LENGTH TAPERED FIT IS VERY FLATTERING. -IT CAN BE STYLED WITH THE BOATNECK BURGUNDY DRESS OR A PLAIN WHITE TSHIRT. -100% SILK -MODEL'S HEIGHT IS 5'10\" WEARING SIZE S/M","images":["images/burgundy-with-charcoal-pinstripe-pant_1.jpg","images/burgundy-with-charcoal-pinstripe-pant_2.jpg"]},{"title":"PALE GREY DISQ T-SHIRT","handle":"disq-pink-t-shirt-1","price":6800.0,"type":"T-SHIRT","description":"-THIS UNISEX T-SHIRT HAS A BOXY FIT WITH A WIDE BODY AND DROPPED SHOULDERS. -IT FEATURES CONTRAST SIDE PANELS AND A RIBBED NECKLINE. -THE STRIKING LARGE RED DOT IS HAND PRINTED AND ADDS A VIBRANT BURST OF COLOUR. -MODEL'S HEIGHT IS 5'10\" WEARING SIZE M","images":["images/disq-pink-t-shirt-1_1.jpg","images/disq-pink-t-shirt-1_2.jpg"]},{"title":"PINK DISQ T-SHIRT","handle":"disq-pink-t-shirt","price":6800.0,"type":"T-SHIRT","description":"-THIS T-SHIRT HAS A BOXY FIT WITH A WIDE BODY AND DROPPED SHOULDERS. -IT FEATURES CONTRAST SIDE PANELS AND A RIBBED NECKLINE. -THE STRIKING LARGE RED DOT IS HANDPRINTED AND ADDS A VIBRANT BURST OF COLOR -MODEL'S HEIGHT IS 5'10\" WEARING SIZE M","images":["images/disq-pink-t-shirt_1.jpg","images/disq-pink-t-shirt_2.jpg"]},{"title":"CYAN DISQ T-SHIRT","handle":"disq-cyan-t-shirt","price":6800.0,"type":"T-SHIRT","description":"-T-SHIRT HAS A BOXY FIT , WIDE BODY AND DROPPED SHOULDERS. -IT FEATURES CONTRAST SIDE PANELS AND A RIBBED NECKLINE. -THE STRIKING LARGE RED DOT ADDS A VIBRANT BURST OF COLOUR. -100% COTTON -MODEL'S HEIGHT IS 5'10\" WEARING SIZE M","images":["images/disq-cyan-t-shirt_1.jpg","images/disq-cyan-t-shirt_2.jpg"]},{"title":"MAGENTA DISQ T-SHIRT","handle":"disq-pale-grey-t-shirt","price":6800.0,"type":"T-SHIRT","description":"-THIS UNISEX T-SHIRT HAS A BOXY FIT WITH A WIDE BODY AND DROPPED SHOULDERS. -IT FEATURES A STRIKING LARGE BLUE DOT AND A RIBBED NECKLINE. -THE CONTRAST BRIGHT SIDE PANELS ADD A VIBRANT BURST OF COLOUR. -MODEL'S HEIGHT IS 5'10\" WEARING SIZE M","images":["images/disq-pale-grey-t-shirt_1.jpg","images/disq-pale-grey-t-shirt_2.jpg"]},{"title":"CHARCOAL TUCK PANT","handle":"charcoal-tuck-pant","price":6200.0,"type":"BOTTOMS","description":"-ANKLE LENGTH TAPERED POPLIN PANTS WITH AN ELASTICATED GATHERED WAIST. -THE PANTS HAVE ON SEAM POCKETS AND KNEE TUCKS THE PANTS TAPER GENTLY TO THE HEM WITH LOOSE WAISTLINE AND HIPS FOR COMFORT. -THEY CAN BE WORN WITH THE GREYS BORO DRESS ALSO THE GRES BORO TOP . -100% COTTON -MODEL'S HEIGHT IS 5'10\" WEARING SIZE S/M","images":["images/charcoal-tuck-pant_1.jpg","images/charcoal-tuck-pant_2.jpg"]},{"title":"BEIGE QUILTED JACKET","handle":"beige-quilted-jacket","price":11000.0,"type":"Jackets","description":"-THIS KIMONO PULLOVER STYLE JACKET IS MADE OF FINE SILK LIGHTLY PADDED ,LAYERED AND QUILTED. -WASHED TREATED TO MAKE IT SOFT AND TEXTURED. -IT IS A GREAT STYLE TO WEAR OVER A DRESS OR SIMPLY TO LOUNGE IN. -100% SILK TOP LAYER , 100% COTTON UNDER LAYERS -MODEL'S HEIGHT IS 5'10\" WEARING SIZE S/M","images":["images/beige-quilted-jacket_1.jpg","images/beige-quilted-jacket_2.jpg"]},{"title":"DENIM HOODIE","handle":"denim-hoodie","price":11000.0,"type":"Jackets","description":"-LIGHT DENIM HAND PRINTED HOODIE WITH AN ALL-OVER SURFACE BLOCK PRINT. -THE HAND BLOCK PRINT MAKES THE SURFACE STIFF. -THE HOODIE HAS COTTON RIBBED CUFFS AND A CENTRE BACK SLIT . -THERE IS SNAP BUTTON OPENING AND GATHERS UNDER THE FRONT PLACKET . -THERE ARE ON-SEAM POCKETS. IT IS AN EASY PULLOVER STYLE WITH RAGLAN SLEEVES. -100% COTTON -MODEL'S HEIGHT IS 5'10\"","images":["images/denim-hoodie_1.jpg","images/denim-hoodie_2.jpg"]},{"title":"NAVY WITH GREY STRIPE PANT","handle":"navy-with-grey-stripe-pant","price":8400.0,"type":"BOTTOMS","description":"-THE PANT IS MADE OF TIGHTLY WOVEN CRISP SILK WITH HAND SCREEN PRINTED STRIPES ALL OVER. -THE ROOMY FIT WITH HALF ELASTIC WAIST AND FRONT ZIP OPENING MAKES IT STRESS FREE AND EASY TO WEAR . -THE ANKLE LENGTH TAPERED FIT IS VERY FLATTERING. -IT CAN BE WORN WITH THE BIG DOT NAVY DRESS OR BIG DOT NAVY TOP. -100% SILK -MODEL'S HEIGHT IS 5'10\" WEARING SIZE S/M","images":["images/navy-with-grey-stripe-pant_1.jpg","images/navy-with-grey-stripe-pant_2.jpg"]},{"title":"NAVY WITH GREY PINSTRIPE PANT.","handle":"navy-with-grey-pinstripe-pant","price":8400.0,"type":"BOTTOMS","description":"-THE PANT IS MADE OF TIGHTLY WOVEN CRISP SILK WITH HAND SCREEN PRINTED STRIPES ALL OVER. -THE ROOMY FIT WITH AN ELASTIC WAIST AND INSIDE DRAWSTRING MAKES IT STRESS FREE AND EASY TO WEAR . -THE ANKLE LENGTH TAPERED FIT IS VERY FLATTERING.IT CAN BE WORN WITH THE NAVY BOATNECK DRESS. -100% SILK -MODEL'S HEIGHT IS 5'10\" WEARING SIZE S/M","images":["images/navy-with-grey-pinstripe-pant_1.jpg","images/navy-with-grey-pinstripe-pant_2.jpg"]},{"title":"BURGUNDY WITH GREY STRIPE PAINT","handle":"burgundy-with-gray-stripe-paint","price":8400.0,"type":"BOTTOMS","description":"-THE PANT IS MADE OF TIGHTLY WOVEN CRISP SILK WITH HAND SCREEN PRINTED FINE STRIPES ALL OVER. -THE ROOMY FIT WITH HALF ELASTIC WAIST AND FRONT ZIP OPENING MAKES IT STRESS FREE AND EASY TO WEAR . -THE ANKLE LENGTH TAPERED FIT IS VERY FLATTERING. -IT CAN BE WORN WITH THE BIG DOT BURGUNDY DRESS OR BIG DOT BURGUNDY TOP. -100% SILK -MODEL'S HEIGHT IS 5'10\" WEARING SIZE S/M","images":["images/burgundy-with-gray-stripe-paint_1.jpg","images/burgundy-with-gray-stripe-paint_2.jpg"]},{"title":"BROWN WITH NAVY PINSTRIPE PANT","handle":"brown-with-navy-pinstripe-pant","price":8400.0,"type":"BOTTOMS","description":"-THE PANT IS MADE OF TIGHTLY WOVEN CRISP SILK WITH HAND SCREEN PRINTED STRIPES ALL OVER. -THE ROOMY FIT MAKES IT STRESS FREE AND EASY TO WEAR . -THE ANKLE LENGTH TAPERED FIT IS VERY FLATTERING. -IT CAN BE WORN WITH THE BIG DOT BROWN DRESS OR A PLAIN TSHIRT. -100% SILK -MODEL'S HEIGHT IS 5'10\" WEARING SIZE S/M","images":["images/brown-with-navy-pinstripe-pant_1.jpg","images/brown-with-navy-pinstripe-pant_2.jpg"]},{"title":"BLACKISH WIDE PANT","handle":"blackish-wide-pant","price":8000.0,"type":"BOTTOMS","description":"-WIDE STRAIGHT PANT HAS A GATHERED ELASTICATED WAIST IN WASHED POPLIN. -WITH A HAND-PAINT PRINT THAT BECOMES MORE BEAUTIFUL WITH TIME. -THE PANT HAS DEEP FRONT AND BACK PLEATS. -A RELAXED OVERSIZED SILHOUETTE WITH ON SEAM SIDE POCKETS. -THE PANT IS 100% COTTON AND CAN BE COMFORTABLY WORN THROUGH THE SEASONS. -IT CAN BE PAIRED WITH BLACKISH SMOCK OR WORN WITH A PLAIN WHITE TEE. -MODEL'S HEIGHT IS 5","images":["images/blackish-wide-pant_1.jpg","images/blackish-wide-pant_2.jpg"]},{"title":"RED TUCK PANT.","handle":"red-tuck-pant","price":6200.0,"type":"BOTTOMS","description":"-ANKLE LENGTH TAPERED POPLIN PANT WITH AN ELASTICATED GATHERED WAIST. -THE PANTS HAVE ON SEAM POCKETS AND KNEE TUCKS. -THE PANTS TAPER GENTLY TO THE HEM. -LOOSE WAISTLINE AND HIPS FOR COMFORT. -THEY CAN BE WORN WITH THE REDS BORO DRESS ALSO THE REDS BORO TOP . -100% COTTON -MODEL'S HEIGHT IS 5'10\" WEARING SIZE S/M","images":["images/red-tuck-pant_1.jpg","images/red-tuck-pant_2.jpg"]},{"title":"BLUE TUCK PANT","handle":"blue-tuck-pant","price":6200.0,"type":"BOTTOMS","description":"-ANKLE LENGTH TAPERED POPLIN PANT WITH AN ELASTICATED GATHERED WAIST. -THE PANT HAS ON SEAM POCKETS AND KNEE TUCKS . -THE PANT TAPERS GENTLY TO THE HEM . -LOOSE WAISTLINE AND HIPS FOR COMFORT. -THEY CAN BE WORN WITH THE BLUES BORO DRESS ALSO THE BLUES BORO TOP -100% COTTON -MODEL'S HEIGHT IS 5'10\" WEARING SIZE S/M","images":["images/blue-tuck-pant_1.jpg","images/blue-tuck-pant_2.jpg"]},{"title":"INDIGO TEE","handle":"indigo-tee","price":6800.0,"type":"TOPS","description":"-HALF SLEEVE INDIGO DYED KHADI T-SHIRT. -IT HAS AN EASY ROUND NECK AND SHOULDER BUTTON PLACKET . -THERE ARE SHAPED SIDE VENTS AND A HAND BLOCK PRINTED SQUARE ON FRONT . -DUE TO THE NATURAL INDIGO DYEING PROCESS TO COLOUR THE FABRIC THE COLOUR MAY FADE WHEN WET OR RUBBED. PLEASE HANDLE WITH CARE THE COLOUR MIGHT RUB OFF ON BODY OR OTHER FABRIC. -100% COTTON MODEL'S HEIGHT IS 5'10\" WEARING SIZE S/M-","images":["images/indigo-tee_1.jpg","images/indigo-tee_2.jpg"]},{"title":"WASHED COLLARED SHIRT","handle":"collared-washed-shirt","price":7400.0,"type":"TOPS","description":"-THE COTTON SHIRT HAS CURVED SHIRT-TAILED HEM WITH RAGLAN SLEEVES AT THE BACK. -THE COLLARED SHIRT HAS AN ON-SEAM STRUCTURED POCKET AND A WIDE FRONT FACED OPENING. -FULL SLEEVES HAVE A BUTTONED CUFF. -THE WASHED EFFECT MAKES THE COTTON VERY SOFT AND LIGHT ON THE SKIN. -100% COTTON -MODEL'S HEIGHT IS 5'10\" WEARING SIZE S","images":["images/collared-washed-shirt_1.jpg","images/collared-washed-shirt_2.jpg"]},{"title":"GREYS BORO TOP","handle":"greys-boro-top","price":9000.0,"type":"TOPS","description":"-A CLOSE ROUND NECK SQUARE TOP WITH THREE QUARTER LENGTH SLEEVES IN A PLAYFUL PATCHWORK INSPIRED BY JAPANESE TECHNIQUE OF REPAIRING TEXTILES. -THE TOP HAS DROPPED SHOULDERS AND A RELAXED OVERSIZED SILHOUETTE WITH A SINGLE BUTTON BACK CLOSURE AND A KEYHOLE BELOW. -THE TOP IS 100% COTTON AND CAN BE COMFORTABLY WORN THROUGH THE SEASONS. IT CAN BE COMBINED WITH THE GREY TUCK PANT MADE FROM THE SAME FA","images":["images/greys-boro-top_1.jpg","images/greys-boro-top_2.jpg"]},{"title":"REDS BORO TOP","handle":"reds-boro-top","price":9000.0,"type":"TOPS","description":"-A CLOSE ROUND NECK SQUARE TOP WITH THREE QUARTER LENGTH SLEEVES IN A PLAYFUL PATCHWORK INSPIRED BY JAPANESE TECHNIQUE OF REPAIRING TEXTILES. -THE TOP HAS DROPPED SHOULDERS AND A RELAXED OVERSIZED SILHOUETTE WITH A SINGLE BUTTON BACK CLOSURE AND A KEYHOLE BELOW. -THE TOP IS 100% COTTON AND CAN BE COMFORTABLY WORN THROUGH THE SEASONS. IT CAN BE COMBINED WITH THE RED TUCK PANT MADE FROM THE SAME FAB","images":["images/reds-boro-top_1.jpg","images/reds-boro-top_2.jpg"]},{"title":"BLUES BORO TOP","handle":"blues-boro-top","price":9000.0,"type":"TOPS","description":"-A CLOSE ROUND NECK SQUARE TOP WITH THREE QUARTER LENGTH SLEEVES IN A PLAYFUL PATCHWORK INSPIRED BY JAPANESE TECHNIQUE OF REPAIRING TEXTILES. -THE TOP HAS DROPPED SHOULDERS AND A RELAXED OVERSIZED SILHOUETTE WITH A SINGLE BUTTON BACK CLOSURE AND A KEYHOLE BELOW. -THE TOP IS 100% COTTON AND CAN BE COMFORTABLY WORN THROUGH THE SEASONS. IT CAN BE COMBINED WITH THE BLUE TUCK PANT MADE FROM THE SAME FA","images":["images/blues-boro-top_2.jpg"]},{"title":"NAVY BIG DOT TOP","handle":"big-dot-navy-top","price":9000.0,"type":"TOPS","description":"-A ROUND NECK TOP WITH 3/4 SLEEVES , STRAIGHT HEM , SIDE SLITS AND A LONGER BACK IS MADE WITH LIGHT TIGHTLY WOVEN SILK WITH THREE DIFFERENT KINDS OF PRINTS. -THE HAND SCREEN PRINT MAKES THE SILK FABRIC STIFF. -IT HAS ON- SEAMS POCKETS,A RELAXED AND OVERSIZED SILHOUETTE.IT CAN BE PAIRED WITH NAVY WITH BEIGE STRIPE PANT . -100% SILK -MODEL'S HEIGHT IS 5'10\" WEARING SIZE S/M","images":["images/big-dot-navy-top_1.jpg","images/big-dot-navy-top_2.jpg"]},{"title":"BURGUNDY BIG DOT TOP","handle":"big-dot-burgundy-top","price":9000.0,"type":"TOPS","description":"-A ROUND NECK TOP WITH THREE QUARTER SLEEVES , STRAIGHT HEM , SIDE SLITS AND A LONGER BACK. -IT IS MADE WITH LIGHT TIGHTLY WOVEN SILK WITH THREE DIFFERENT KINDS OF PRINTS. -THE HAND SCREEN PRINT MAKES THE SILK FABRIC STIFF. -IT HAS ON- SEAMS POCKETS,A RELAXED AND OVERSIZED SILHOUETTE.IT CAN BE PAIRED WITH BURGUNDY WITH BEIGE STRIPE PANT. -100% COTTON","images":["images/big-dot-burgundy-top_2.jpg"]},{"title":"NAVY BOAT NECK DRESS","handle":"navy-boat-neck-dress","price":14000.0,"type":"Dress","description":"-THE DRESS IS MADE OF TIGHTLY WOVEN CRISP SILK WITH HAND SCREEN PRINTED STRIPES ALL OVER. -THE FIT IS RELAXED AND OVERSIZED , EASY TO WEAR . -THE NECK HAS A GATHERED DETAIL , RAGLAN SLEEVES AND ON SEAM POCKETS. -IT CAN BE WORN WITH THE NAVY WITH GREY PINSTRIPE PANTS. -100% SILK","images":["images/navy-boat-neck-dress_1.jpg","images/navy-boat-neck-dress_2.jpg"]},{"title":"GREYS BORO DRESS","handle":"greys-boro-dress","price":14000.0,"type":"Dress","description":"-BOAT NECK A-LINE DRESS WITH THREE QUARTER LENGTH SLEEVES IN A PLAYFUL PATCHWORK INSPIRED BY JAPANESE TECHNIQUE OF REPAIRING TEXTILES. -THE DRESS HAS A RELAXED OVERSIZED SILHOUETTE WITH ON SEAM SIDE POCKETS. -THE DRESS IS 100% COTTON AND CAN BE COMFORTABLY WORN THROUGH THE SEASONS. -IT CAN BE COMBINED WITH THE GREY TUCK PANT MADE FROM THE SAME FABRIC AS THE DRESS.","images":["images/greys-boro-dress_1.jpg","images/greys-boro-dress_2.jpg"]},{"title":"REDS BORO DRESS","handle":"reds-boro-dress","price":14000.0,"type":"Dress","description":"-BOAT NECK A-LINE DRESS WITH THREE QUARTER LENGTH SLEEVES IN A PLAYFUL PATCHWORK. -INSPIRED BY JAPANESE TECHNIQUE OF REPAIRING TEXTILES. THE DRESS HAS A RELAXED OVERSIZED SILHOUETTE WITH ON SEAM SIDE POCKETS. -THE DRESS IS 100% COTTON AND CAN BE COMFORTABLY WORN THROUGH THE SEASONS. -IT CAN BE COMBINED WITH THE RED TUCK PANT MADE FROM THE SAME FABRIC AS THE DRESS.","images":["images/reds-boro-dress_1.jpg","images/reds-boro-dress_2.jpg"]},{"title":"BLUES BORO DRESS","handle":"blues-boro-dress","price":14000.0,"type":"Dress","description":"-BOAT NECK A-LINE DRESS WITH THREE QUARTER LENGTH SLEEVES IN A PLAYFUL PATCHWORK INSPIRED BY JAPANESE TECHNIQUE OF REPAIRING TEXTILES. -THE DRESS HAS A RELAXED OVERSIZED SILHOUETTE WITH ON SEAM SIDE POCKETS. -THE DRESS IS 100% COTTON AND CAN BE COMFORTABLY WORN THROUGH THE SEASONS. -IT CAN BE COMBINED WITH THE BLUE TUCK PANT MADE FROM THE SAME FABRIC AS THE DRESS.","images":["images/blues-boro-dress_1.jpg","images/blues-boro-dress_2.jpg"]},{"title":"BLACKISH SMOCK","handle":"blackish-smoke","price":14000.0,"type":"Dress","description":"-LONG DRESS HAS A STANDING COLLAR ON A PLEATED YOKE WITH GATHERS UNDER. -DROPPED SHOULDERS WITH THREE QUARTER LENGTH SLEEVES. -IN WASHED POPLIN THAT BECOMES MORE BEAUTIFUL WITH TIME, -THE DRESS HAS A RELAXED OVERSIZED SILHOUETTE WITH ON SEAM SIDE POCKETS. -THE DRESS IS 100% COTTON AND CAN BE COMFORTABLY WORN THROUGH THE SEASONS. IT CAN BE PAIRED WITH BLACKISH WIDE PANTS OR WORN ON ITS OWN.","images":["images/blackish-smoke_1.jpg","images/blackish-smoke_2.jpg"]},{"title":"NAVY BIG DOT DRESS","handle":"big-dot-navy-dress","price":14000.0,"type":"Dress","description":"-THIS SLIGHTLY A-LINE DRESS WITH 3/4 SLEEVES IS MADE WITH LIGHT TIGHTLY WOVEN SILK WITH THREE DIFFERENT KINDS OF PRINTS. -THE HAND SCREEN PRINT MAKES THE SILK FABRIC STIFF. -IT HAS ON SEAMS POCKETS,A RELAXED AND OVERSIZED SILHOUETTE.IT CAN BE PAIRED WITH NAVY WITH BEIGE STRIPE PANT OR WORN ON ITS OWN . -100% SILK","images":["images/big-dot-navy-dress_1.jpg","images/big-dot-navy-dress_2.jpg"]},{"title":"BURGUNDY BIG DOT DRESS","handle":"big-dot-burgundy-dress","price":14000.0,"type":"Dress","description":"-THIS SLIGHTLY A-LINE DRESS WITH 3/4 SLEEVES IS MADE WITH LIGHT TIGHTLY WOVEN SILK WITH THREE DIFFERENT KINDS OF PRINTS. -THE HAND SCREEN PRINT MAKES THE SILK FABRIC STIFF. -IT HAS ON SEAMS POCKETS,A RELAXED AND OVERSIZED SILHOUETTE. -IT CAN BE PAIRED WITH BURGUNDY WITH BEIGE STRIPE PANT OR WORN ON ITS OWN . -100% SILK -MODEL'S HEIGHT IS 5'10\" WEARING SIZE S/M","images":["images/big-dot-burgundy-dress_2.jpg"]},{"title":"BROWN BIG DOT DRESS","handle":"big-dot-brown-dress","price":14000.0,"type":"Dress","description":"-THIS SLIGHTLY A-LINE DRESS WITH 3/4 SLEEVES IS MADE WITH LIGHT TIGHTLY WOVEN SILK WITH THREE DIFFERENT KINDS OF PRINTS. -THE HAND SCREEN PRINT MAKES THE SILK FABRIC STIFF. -IT HAS ON SEAMS POCKETS,A RELAXED AND OVERSIZED SILHOUETTE.IT CAN BE PAIRED WITH BROWN WITH NAVY PINSTRIPE PANT OR WORN ON ITS OWN. -100% SILK","images":["images/big-dot-brown-dress_2.jpg"]}];
+    const categories = [
+      {name:'Dresses',type:'Dress',image:'marbled-smock-dress_1.jpg'},
+      {name:'Tops',type:'TOPS',image:'big-dot-navy-top_1.jpg'},
+      {name:'Bottoms',type:'BOTTOMS',image:'blackish-wide-pant_1.jpg'},
+      {name:'T-Shirts',type:'T-SHIRT',image:'disq-black-n-white-t-shirt_1.jpg'},
+      {name:'Jackets',type:'Jackets',image:'beige-quilted-jacket_1.jpg'},
+      {name:'Accessories',type:'things',image:'silver-tote_1.jpg'}
+    ];
+    const rupees = new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0});
+    const grid = document.getElementById('productGrid');
+    const filters = document.getElementById('filters');
+    const categoriesEl = document.getElementById('categories');
+    const resultsNote = document.getElementById('resultsNote');
+    const searchInput = document.getElementById('searchInput');
+    const clearSearch = document.getElementById('clearSearch');
+    const loadMore = document.getElementById('loadMore');
+    const loadMoreWrap = document.getElementById('loadMoreWrap');
+    const progressText = document.getElementById('progressText');
+    const progressPercent = document.getElementById('progressPercent');
+    const progressBar = document.getElementById('progressBar');
+    const progressTrack = document.getElementById('progressTrack');
+    const dialog = document.getElementById('quickView');
+    const wishlistKey='iswas-wishlist-v1';
+    let wishlist=new Set();
+    try{ wishlist=new Set(JSON.parse(localStorage.getItem(wishlistKey)||'[]')); }catch(err){ wishlist=new Set(); }
+    function saveWishlist(){ try{ localStorage.setItem(wishlistKey,JSON.stringify([...wishlist])); }catch(err){} }
+    function updateWishlistUI(){
+      document.querySelectorAll('[data-wishlist]').forEach(btn=>{ btn.setAttribute('aria-pressed',String(wishlist.has(btn.dataset.wishlist))); });
+      const count=document.getElementById('wishlistCount');
+      count.hidden=wishlist.size===0; count.textContent=String(wishlist.size);
+      document.getElementById('wishlistButton').setAttribute('aria-label',wishlist.size?('Wishlist, '+wishlist.size+' saved'):'Wishlist');
+    }
+    function toggleWishlist(handle){
+      const p=products.find(item=>item.handle===handle);
+      const name=p?p.title:'piece';
+      if(wishlist.has(handle)){ wishlist.delete(handle); showToast('Removed \u201C'+name+'\u201D from your wishlist.'); }
+      else{ wishlist.add(handle); showToast('Saved \u201C'+name+'\u201D to your wishlist.'); }
+      saveWishlist(); updateWishlistUI();
+    }
+    const pageSize = 12;
+    let active = 'All';
+    let visibleLimit = pageSize;
+    let searchTerm = '';
+
+    function labelFor(type){ const hit=categories.find(c=>c.type===type); return hit ? hit.name : type; }
+    function escapeHTML(value){ return String(value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c])); }
+    function cleanDescription(value){
+      return value.split(/\s+-\s*/).filter(Boolean).map(part=>{
+        const lower=part.toLowerCase().replace(/\s+/g,' ').trim();
+        return lower ? lower.charAt(0).toUpperCase()+lower.slice(1) : '';
+      }).join('\n\n');
+    }
+    function imagePath(value){ return 'assets/'+value.replace(/^images\//,''); }
+
+    function renderCategories(){
+      categoriesEl.innerHTML=categories.map(c=>{
+        const count=products.filter(p=>p.type===c.type).length;
+        return `<button class="category" type="button" data-type="${escapeHTML(c.type)}" aria-label="Show ${escapeHTML(c.name)}"><img src="assets/${escapeHTML(c.image)}" alt="${escapeHTML(c.name)} from the iswas collection" loading="lazy"><span class="category-label"><strong>${escapeHTML(c.name)}</strong><span>${count} pieces</span></span></button>`;
+      }).join('');
+    }
+    function renderFilters(){
+      const items=[{name:'All pieces',type:'All'},...categories];
+      filters.innerHTML=items.map(c=>{
+        const count=c.type==='All'?products.length:products.filter(p=>p.type===c.type).length;
+        return `<button class="filter" type="button" data-filter="${escapeHTML(c.type)}" aria-pressed="${c.type===active}">${escapeHTML(c.name)} <span class="filter-count">${count}</span></button>`;
+      }).join('');
+    }
+    /* DEMO merchandising flags — wire to real product tags / inventory in the Liquid build */
+    const DEMO_BADGES={
+      'beige-quilted-jacket':'Bestseller','silver-tote':'Bestseller',
+      'burgundy-boat-neck-dress':'New','disq-cyan-t-shirt':'New','reds-boro-dress':'New',
+      'big-dot-brown-dress':'Low stock','greys-boro-top':'Low stock'
+    };
+
+    function renderProducts(){
+      const filtered=(active==='All'?products:products.filter(p=>p.type===active)).filter(p=>{
+        if(!searchTerm)return true;
+        return `${p.title} ${labelFor(p.type)}`.toLowerCase().includes(searchTerm);
+      });
+      const shown=filtered.slice(0,visibleLimit);
+      grid.innerHTML=shown.map((p,index)=>{
+        const first=imagePath(p.images[0]);
+        const second=imagePath(p.images[1]||p.images[0]);
+        const number=String(index+1).padStart(2,'0');
+        const badge=DEMO_BADGES[p.handle];
+        return `<article class="product-card reveal scale-media" data-handle="${escapeHTML(p.handle)}">${badge?`<span class="card-badge"${badge==="Low stock"?' data-tone="low"':""}>${badge}</span>`:""}<button type="button" class="wishlist-btn" data-wishlist="${escapeHTML(p.handle)}" aria-pressed="${wishlist.has(p.handle)}" aria-label="Save ${escapeHTML(p.title)} to wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5C7 16.5 3.5 13.3 3.5 9.6 3.5 7 5.5 5 8 5c1.6 0 3.1.8 4 2.1C12.9 5.8 14.4 5 16 5c2.5 0 4.5 2 4.5 4.6 0 3.7-3.5 6.9-8.5 10.9Z"/></svg></button><button type="button" class="product-image" aria-label="Quick view ${escapeHTML(p.title)}"><img class="product-main" src="${escapeHTML(first)}" alt="${escapeHTML(p.title)}" loading="lazy"><img class="product-alt" src="${escapeHTML(second)}" alt="" loading="lazy"><span class="quick">Quick view</span></button><div class="product-info"><p class="product-index">${number} — ${escapeHTML(p.title)} — <span class="price">${rupees.format(p.price)}</span></p><p class="product-type">${escapeHTML(labelFor(p.type))}</p></div></article>`;
+      }).join('');
+      const total=filtered.length;
+      const shownCount=shown.length;
+      const percent=total?Math.round((shownCount/total)*100):0;
+      resultsNote.textContent=searchTerm?`${total} ${total===1?'match':'matches'}`:`${total} ${total===1?'piece':'pieces'}`;
+      progressText.textContent=total?`${shownCount} of ${total} shown`:'No matches';
+      progressPercent.textContent=`${percent}%`;
+      progressBar.style.width=`${percent}%`;
+      progressTrack.setAttribute('aria-valuemax',String(total));
+      progressTrack.setAttribute('aria-valuenow',String(shownCount));
+      loadMoreWrap.hidden=shownCount>=total;
+      loadMore.textContent=`Show ${Math.min(pageSize,total-shownCount)} more ↓`;
+      clearSearch.hidden=!searchTerm;
+      document.getElementById('emptyState').style.display=shownCount?'none':'block';
+      updateWishlistUI();
+      observeReveals();
+    }
+    function setFilter(type,scroll=true){
+      active=type;
+      visibleLimit=pageSize;
+      renderFilters();
+      renderProducts();
+      if(scroll) smoothScrollTo(document.getElementById('shop'));
+    }
+    function openProduct(handle){
+      const p=products.find(item=>item.handle===handle); if(!p)return;
+      const second=p.images[1]||p.images[0];
+      document.getElementById('modalImage').src=imagePath(second);
+      document.getElementById('modalImage').alt=`Alternate view of ${p.title}`;
+      document.getElementById('modalType').textContent=labelFor(p.type);
+      document.getElementById('modalTitle').textContent=p.title;
+      document.getElementById('modalPrice').textContent=rupees.format(p.price);
+      document.getElementById('modalDescription').textContent=cleanDescription(p.description);
+      dialog.showModal();
+    }
+    function showToast(message='Shopping is disabled in this design prototype.'){
+      const toast=document.getElementById('toast'); toast.textContent=message;toast.classList.add('show');
+      clearTimeout(showToast.timer); showToast.timer=setTimeout(()=>toast.classList.remove('show'),2600);
+    }
+    let observer;
+    function observeReveals(){
+      const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const els=document.querySelectorAll('.reveal:not(.visible):not(.pending)');
+      const media=document.querySelectorAll('.scale-media:not(.is-inview),.category:not(.is-inview),.story-media:not(.is-inview),.campaign-frame:not(.is-inview)');
+      if(reduced){els.forEach(el=>el.classList.add('visible'));return;}
+      if(!observer) observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.remove('pending');entry.target.classList.add('visible','is-inview');if(entry.target.classList.contains('reveal'))entry.target.animate([{opacity:0,transform:'translateY(22px)'},{opacity:1,transform:'none'}],{duration:600,easing:'ease-out'});observer.unobserve(entry.target);}}),{threshold:.06,rootMargin:'0px 0px 80px'});
+      els.forEach(el=>{if(el.getBoundingClientRect().top < innerHeight*1.2){el.classList.add('visible','is-inview');}else{el.classList.add('pending');observer.observe(el);}});
+      media.forEach(el=>{if(el.getBoundingClientRect().top < innerHeight*1.2){el.classList.add('is-inview');}else{observer.observe(el);}});
+    }
+
+    categoriesEl.addEventListener('click',e=>{const b=e.target.closest('[data-type]');if(b)setFilter(b.dataset.type);});
+    filters.addEventListener('click',e=>{const b=e.target.closest('[data-filter]');if(b)setFilter(b.dataset.filter,false);});
+    grid.addEventListener('click',e=>{
+      const w=e.target.closest('[data-wishlist]');
+      if(w){ e.stopPropagation(); toggleWishlist(w.dataset.wishlist); return; }
+      const card=e.target.closest('.product-card');if(card)openProduct(card.dataset.handle);
+    });
+    searchInput.addEventListener('input',()=>{searchTerm=searchInput.value.trim().toLowerCase();visibleLimit=pageSize;renderProducts();});
+    clearSearch.addEventListener('click',()=>{searchInput.value='';searchTerm='';visibleLimit=pageSize;renderProducts();searchInput.focus();});
+    loadMore.addEventListener('click',()=>{visibleLimit+=pageSize;renderProducts();});
+    document.getElementById('modalClose').addEventListener('click',()=>dialog.close());
+    dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});
+    document.getElementById('bagButton').addEventListener('click',()=>showToast());
+    document.getElementById('accountButton').addEventListener('click',()=>showToast('Account sign-in is unavailable in this design demo.'));
+    document.getElementById('wishlistButton').addEventListener('click',()=>{
+      showToast(wishlist.size?('You have '+wishlist.size+' saved '+(wishlist.size===1?'piece':'pieces')+' in your wishlist.'):'Your wishlist is empty. Tap the heart on any piece to save it.');
+    });
+    document.getElementById('privacyLink').addEventListener('click',e=>{e.preventDefault();showToast('The privacy policy ships with the production build.');});
+    document.getElementById('termsLink').addEventListener('click',e=>{e.preventDefault();showToast('The terms of service ship with the production build.');});
+    document.querySelectorAll('[data-filter-link]').forEach(link=>link.addEventListener('click',e=>{active=e.currentTarget.dataset.filterLink;visibleLimit=pageSize;renderFilters();renderProducts();}));
+    const siteNav=document.querySelector('.site-nav');
+    function updateNav(){siteNav.classList.toggle('is-solid',scrollY>80);}
+    addEventListener('scroll',updateNav,{passive:true});
+    updateNav();
+    document.getElementById('emailButton').addEventListener('click',()=>{
+      const input=document.getElementById('emailInput');const hint=document.getElementById('emailHint');
+      if(!input.checkValidity()||!input.value.trim()){hint.textContent='Enter a valid email address first.';input.focus();return;}
+      hint.textContent='Opening your email app. Nothing is sent automatically.';
+      window.location.href='mailto:iswasstudio@gmail.com?subject=Newsletter%20signup&body='+encodeURIComponent('Please add '+input.value.trim()+' to the iswas mailing list.');
+    });
+    renderCategories();renderFilters();renderProducts();observeReveals();
+  </script>
+</body>
+</html>
